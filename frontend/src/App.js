@@ -12,6 +12,10 @@ import Question4 from "./components/Question4";
 import Question5 from "./components/Question5";
 import Question6 from "./components/Question6";
 import Question7 from "./components/Question7";
+import ProductList from "./components/ProductList";
+import News from "./components/News";
+
+
 
 function App() {
   return (
@@ -28,6 +32,9 @@ function App() {
           <Route path="/quiz/question6" component={Question6} />
           <Route path="/quiz/question7" component={Question7} />
           <Route path="/quiz" component={Quiz} />
+          <Route path="/productList" component={ProductList} />
+          <Route path="/news" component={News} />
+          
         </Switch>
       </BrowserRouter>
     </div>

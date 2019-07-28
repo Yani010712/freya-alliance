@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import ProductList from './ProductList';
+import News from './News';
+
 
 class Main extends Component {
   render() {
@@ -43,7 +46,7 @@ class Main extends Component {
         <br />
         <br />
         <br />
-        <h1 id="hello4">Hello 4</h1>
+        <h1 id="products"><ProductList/></h1>
         <br />
         <br />
         <br />
@@ -56,7 +59,7 @@ class Main extends Component {
         <br />
         <br />
         <br />
-        <h1 id="hello5">Hello 5</h1>
+        <h1 id="news"><News/></h1>
         <br />
         <br />
         <br />

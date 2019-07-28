@@ -10,11 +10,11 @@ const Navigation = () => {
             <NavLink className="nav-item nav-link active" to="/">
               Home
             </NavLink>
-            <NavLink className="nav-item nav-link" to="/#hello4">
-              Hello Four
+            <NavLink className="nav-item nav-link" to="/#products">
+              Products
             </NavLink>
-            <NavLink className="nav-item nav-link" to="/#hello5">
-              Hello Five
+            <NavLink className="nav-item nav-link" to="/#news">
+              News
             </NavLink>
             <NavLink className="nav-item nav-link" to="/#hello6">
               Hello Six
