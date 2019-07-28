@@ -1,8 +1,10 @@
 import React from "react";
 import Question1 from "./components/Question1";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import "./App.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+
 import Main from "./components/Main";
 import Navigation from "./components/Navigation";
 import Quiz from "./components/Quiz";

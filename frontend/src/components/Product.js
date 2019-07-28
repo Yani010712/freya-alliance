@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Product extends Component {
   render() {
     return (
-      <div className="product card-deck">
+      <div className="product card">
       <div className="image-container">
         <img className="card-img-top" src={this.props.product.img_src} alt={this.props.product.img_src}/>
         <div className="card-body">

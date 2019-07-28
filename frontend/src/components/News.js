@@ -13,7 +13,7 @@ class News extends Component {
     }
 
     componentDidMount = () => {
-        axios.get(`https://newsapi.org/v2/everything?q=women+menstrual&apiKey=${API_KEY}
+        axios.get(`https://newsapi.org/v2/everything?q=women+menstrual&apiKey=${API_KEY}&pageSize=2
              `)
              .then(response => {
                 const data = response.data;
@@ -46,7 +46,7 @@ class News extends Component {
             <div>
               <div className="row">
                 {this.state.list.map((item, index) => (
-                  <div key={index} className="card col-lg-3 col-6 col-md-5 offset-lg-0 offset-md-1 offset-3 book-list-info">
+                  <div key={index} className="col-lg-6 col-6 col-md-5 list-info">
                     <NewsItem
                       source={item.source.name}
                       title={item.title}

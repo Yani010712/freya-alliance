@@ -6,14 +6,13 @@ body {
   padding-top: 70px;
 }
 
-ul {
-  text-align: left;
-}
-
 li {
   display: block;
 }
 
+.navbar-pink{
+  background-color: #9c314b !important;
+}
 
 
 
