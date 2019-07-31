@@ -18,7 +18,7 @@ class ProductCarousel extends React.Component {
         .then(response => {
           console.log(response)
           this.setState({
-            list: response.data.products
+            list: response.data
           })
         })
         .catch(error => console.log(error))

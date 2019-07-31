@@ -49,7 +49,7 @@ class Question1 extends Component {
       }
     return (
       <form onSubmit={this.handleSubmit}>
-        <p>Age</p>
+        <p>Select Your Age</p>
         <ul>
           <li>
             <label>

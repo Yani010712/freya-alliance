@@ -49,17 +49,18 @@ class Question2 extends Component {
     }
     return (
       <form onSubmit={this.handleSubmit}>
-        <p>Activity</p>
+        <p>Physical Activity</p>
+        <p>Pick one that best describes your lifestyle</p>
         <ul>
           <li>
             <label>
               <input
                 type="radio"
-                value="under17"
-                checked={activity === "under17"}
+                value="sedentary"
+                checked={activity === "sedentary"}
                 onChange={this.handleChange}
               />
-              Under 17
+              Sedentary
             </label>
           </li>
 
@@ -67,11 +68,11 @@ class Question2 extends Component {
             <label>
               <input
                 type="radio"
-                value="17-30"
-                checked={activity === "17-30"}
+                value="moderate"
+                checked={activity === "moderate"}
                 onChange={this.handleChange}
               />
-              17-30
+              Moderate Activity
             </label>
           </li>
 
@@ -79,23 +80,11 @@ class Question2 extends Component {
             <label>
               <input
                 type="radio"
-                value="31-40"
-                checked={activity === "31-40"}
+                value="active"
+                checked={activity === "active"}
                 onChange={this.handleChange}
               />
-              31-40
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="41+"
-                checked={activity === "41+"}
-                onChange={this.handleChange}
-              />
-              41+
+              Very Active
             </label>
           </li>
         </ul>

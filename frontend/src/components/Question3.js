@@ -14,6 +14,7 @@ class Question3 extends Component {
   componentDidMount = () => {
     const json = sessionStorage.getItem("bladder");
     const bladder = JSON.parse(json);
+    
     if (bladder) {
       this.setState({bladder: bladder });
     }

@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class Quiz extends Component {
+class Home extends Component {
     render() {
         return (
-            <div>
-                <h1>Quiz</h1>
-                <p>Please answer each question to the best of your abilities in order to provide you with the best options</p>
+            
+            <div className= "home-section">
+                <h1>Wondering where to begin?</h1>
+                <h3>Take our quiz today!</h3>
+                <br />
                 <Link className="btn btn-dark" to="/quiz/question1">Start</Link>
                 <br />
                 
             </div>
+            
         );
     }
 }
 
-export default Quiz;
+export default Home;
