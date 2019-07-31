@@ -55,11 +55,11 @@ class Question4 extends Component {
             <label>
               <input
                 type="radio"
-                value="yes"
-                checked={flow === "yes"}
+                value="light"
+                checked={flow === "light"}
                 onChange={this.handleChange}
               />
-              Yes
+              Light
             </label>
           </li>
 
@@ -67,11 +67,23 @@ class Question4 extends Component {
             <label>
               <input
                 type="radio"
-                value="no"
-                checked={flow === "no"}
+                value="regular"
+                checked={flow === "regular"}
                 onChange={this.handleChange}
               />
-              No
+              Regular
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input
+                type="radio"
+                value="heavy"
+                checked={flow === "heavy"}
+                onChange={this.handleChange}
+              />
+              Heavy
             </label>
           </li>
         </ul>

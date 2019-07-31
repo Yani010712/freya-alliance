@@ -55,11 +55,11 @@ class Question1 extends Component {
             <label>
               <input
                 type="radio"
-                value="under17"
-                checked={age === "under17"}
+                value="under20"
+                checked={age === "under20"}
                 onChange={this.handleChange}
               />
-              Under 17
+              Under 20
             </label>
           </li>
 
@@ -67,11 +67,11 @@ class Question1 extends Component {
             <label>
               <input
                 type="radio"
-                value="17-30"
-                checked={age === "17-30"}
+                value="20-35"
+                checked={age === "20-35"}
                 onChange={this.handleChange}
               />
-              17-30
+              20-35
             </label>
           </li>
 
@@ -79,23 +79,11 @@ class Question1 extends Component {
             <label>
               <input
                 type="radio"
-                value="31-40"
-                checked={age === "31-40"}
+                value="36+"
+                checked={age === "36+"}
                 onChange={this.handleChange}
               />
-              31-40
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="41+"
-                checked={age === "41+"}
-                onChange={this.handleChange}
-              />
-              41+
+              36+
             </label>
           </li>
         </ul>
