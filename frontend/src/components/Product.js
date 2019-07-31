@@ -1,18 +1,37 @@
-
 import React, { Component } from 'react';
-
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 
 class Product extends Component {
+
   render() {
+    const classes = makeStyles({
+      card: {
+        maxWidth: 200,
+      },
+    });
+
     return (
-      <div className="product card">
-          <div className="image-container">
-            <a href={this.props.product.url}><img className="card-img-top"  src={this.props.product.image} alt={this.props.product.image}/></a>
-            <div className="card-body">
-            <h5 className="card-title">{this.props.product.brand}</h5>   
-            </div>
-        </div>
-      </div>  
+      <div>
+        <Card className={classes.card}>
+          <a href={this.props.product.url}>
+            <CardMedia
+              component="img"
+              alt={this.props.product.brand}
+              height="150"
+              image={this.props.product.image}
+              title={this.props.product.brand} />
+          </a>
+          <CardContent>
+            <Typography gutterBottom subtitle2="h5" component="h5">
+              {this.props.product.brand}
+            </Typography>
+          </CardContent>
+        </Card>
+      </div>
     );
   }
 }

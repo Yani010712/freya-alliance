@@ -13,7 +13,7 @@ class News extends Component {
     }
 
     componentDidMount = () => {
-        axios.get(`https://newsapi.org/v2/everything?q=women+menstrual&apiKey=${API_KEY}&pageSize=2
+        axios.get(`https://newsapi.org/v2/everything?q=period+menstrual&apiKey=${API_KEY}&pageSize=4
              `)
              .then(response => {
                 const data = response.data;

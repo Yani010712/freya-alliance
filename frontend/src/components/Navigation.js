@@ -11,7 +11,7 @@ const Navigation = () => {
         </a>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <NavLink className="nav-item nav-link active" to="/">
+            <NavLink className="nav-item nav-link active" to="/#home">
               Home
             </NavLink>
             <NavLink className="nav-item nav-link" to="/#products">
@@ -20,8 +20,8 @@ const Navigation = () => {
             <NavLink className="nav-item nav-link" to="/#news">
               News
             </NavLink>
-            <NavLink className="nav-item nav-link" to="/#hello6">
-              Hello Six
+            <NavLink className="nav-item nav-link" to="/#reviews">
+              Reviews
             </NavLink>
             <NavLink className="nav-item nav-link" to="/quiz">
               Quiz

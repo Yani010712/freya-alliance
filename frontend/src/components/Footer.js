@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import OurStory from './OurStory';
+import ContactUs from './ContactUs';
+
 
 class Footer extends Component {
     render() {
         return (
             <div>
-               <p>2019, The Freya Alliance</p>
-               <p>All rights reserved</p>  
+              <OurStory/>
+              <ContactUs></ContactUs>
+               <p>The Freya Alliance - All rights reserved</p>  
             </div>
         );
     }

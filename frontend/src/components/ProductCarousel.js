@@ -1,38 +1,35 @@
 import React from 'react';
 import axios from 'axios';
-
 import Slider from "react-slick";
-
 import Product from './Product';
 
 class ProductCarousel extends React.Component {
   constructor() {
     super();
     this.state = {
-    list: []
+      list: []
     }
-    }
-    
-    componentDidMount() {
-        axios.get('/featured')
-        .then(response => {
-          console.log(response)
-          this.setState({
-            list: response.data
-          })
+  }
+
+  componentDidMount() {
+    axios.get('/featured')
+      .then(response => {
+        console.log(response)
+        this.setState({
+          list: response.data
         })
-        .catch(error => console.log(error))
-    }
+      })
+      .catch(error => console.log(error))
+  }
 
-  render(){
-
+  render() {
     const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 2,
-      autoplay: true,
+      dots: false,
+      infinite: false,
+      speed: 1000,
+      slidesToShow: 6,
+      slidesToScroll: 6,
+      autoplay: false,
       responsive: [
         {
           breakpoint: 1024,
@@ -63,16 +60,16 @@ class ProductCarousel extends React.Component {
       ]
     };
 
-    return(
+    return (
       <div >
-          <Slider {...settings}>
-            {this.state.list.map((product, index) => (
-              <Product key={index} product={product}/>
-            ))}
+        <Slider {...settings}>
+          {this.state.list.map((product, index) => (
+            <Product key={index} product={product} />
+          ))}
         </Slider>
       </div>
     );
   }
 }
 
-  export default ProductCarousel;
+export default ProductCarousel;

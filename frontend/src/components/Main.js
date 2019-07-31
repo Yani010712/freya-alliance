@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import ProductCarousel from './ProductCarousel';
 import News from './News';
 import Home from './Home';
@@ -8,11 +9,12 @@ import Articles from './Articles';
 
 
 
+
 class Main extends Component {
   render() {
     return (
       <div className="container">
-        <div className="home-section">
+        <div id="home" className="home-section">
           <Home/>
         </div>
         <br />
@@ -50,8 +52,16 @@ class Main extends Component {
           <h2 id="products" className="mb-4">Recommended Products</h2>
           <ProductCarousel />
           <br/>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+          <h2>Articles</h2>
           <Articles />
         </div>
+        <br />
+        <br />
         <br />
         <br />
         <div className="clearfix">
@@ -70,13 +80,15 @@ class Main extends Component {
         <br />
         <br />
         <br />
-        <h1 id="hello6">Hello 6</h1>
+        <h1 id="reviews">Reviews</h1>
         <br />
         <br />
         <br />
         <br />
         <br />
         <br />
+        <div >
+        </div>
         <br />
         <div>
           <Footer/>
