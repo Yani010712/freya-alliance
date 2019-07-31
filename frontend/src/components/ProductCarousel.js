@@ -14,7 +14,7 @@ class ProductCarousel extends React.Component {
     }
     
     componentDidMount() {
-        axios.get('/products')
+        axios.get('/featured')
         .then(response => {
           console.log(response)
           this.setState({

@@ -38,6 +38,9 @@ let Cup = new Schema({
     price: {
         type: Number
     },
+    featured: {
+      type: Boolean
+    },
     medical_grade: {
       type: Boolean
     },

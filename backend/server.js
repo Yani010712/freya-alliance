@@ -22,6 +22,16 @@ connection.once('open', function () {
 
 // app.get('/products', (_, res) => res.send({ products: ProductsList }));
 
+app.get("/featured", (_, response) => {
+  CupsData.find({ featured: true }, (error, cups) => {
+    if (error) {
+      console.log(error);
+    } else {
+      response.json(cups);
+    }
+  });
+});
+
 app.get("/products", (_, response) => {
     CupsData.find((error, cups) => {
       if (error) {
