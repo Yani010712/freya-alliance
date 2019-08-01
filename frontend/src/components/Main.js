@@ -64,10 +64,10 @@ class Main extends Component {
         <br />
         <br />
         <br />
-        <div className="clearfix">
+        {/* <div className="clearfix">
           <h2 id="news" className="mb-4">News</h2>
           <News/>
-        </div>
+        </div> */}
         <br />
         <br />
         <br />

@@ -22,11 +22,26 @@ class Question2 extends Component {
   componentDidUpdate = () => {
     const activity = JSON.stringify(this.state.activity);
     sessionStorage.setItem("activity", activity);
+    if (this.state.results) {
+      const results = JSON.stringify(this.state.results);
+      sessionStorage.setItem("results", results);
+    }
   };
 
   handleChange = event => {
+    const activity = event.target.value;
+    const resultsJson = sessionStorage.getItem("results");
+    const results = JSON.parse(resultsJson);
+
+    switch (activity) {
+      case 'active':
+        results.firmness = 'F';
+        break;
+      default:
+    }
     this.setState({
-      activity: event.target.value
+      activity: activity,
+      results: results
     });
   };
 
@@ -34,7 +49,7 @@ class Question2 extends Component {
     event.preventDefault();
 
     if (this.state.activity) {
-      this.setState({ 
+      this.setState({
         navigate: true
       })
     } else {

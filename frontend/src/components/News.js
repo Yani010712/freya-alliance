@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import NewsItem from './NewsItem';
+import Footer from './Footer';
 
 const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
 
@@ -58,6 +59,9 @@ class News extends Component {
                 </div>
                 ))}
               </div>
+            </div>
+            <div>
+              <Footer />
             </div>
         </div>
         );

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import axios from 'axios';
 import Slider from "react-slick";
@@ -14,7 +15,6 @@ class ProductCarousel extends React.Component {
   componentDidMount() {
     axios.get('/featured')
       .then(response => {
-        console.log(response)
         this.setState({
           list: response.data
         })

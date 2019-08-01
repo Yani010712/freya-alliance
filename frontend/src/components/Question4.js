@@ -15,18 +15,38 @@ class Question4 extends Component {
     const json = sessionStorage.getItem("flow");
     const flow = JSON.parse(json);
     if (flow) {
-      this.setState({flow: flow });
+      this.setState({ flow: flow });
     }
   };
 
   componentDidUpdate = () => {
     const flow = JSON.stringify(this.state.flow);
     sessionStorage.setItem("flow", flow);
+    if (this.state.results) {
+      const results = JSON.stringify(this.state.results);
+      sessionStorage.setItem("results", results);
+    }
   };
 
   handleChange = event => {
+    const flow = event.target.value;
+    const resultsJson = sessionStorage.getItem("results");
+    const results = JSON.parse(resultsJson);
+
+    switch (flow) {
+      case 'light':
+        results.capacity = 'S';
+        break;
+      case 'heavy':
+        results.capacity = 'L';
+        break;
+      default:
+        results.capacity = 'M';
+        break;
+    }
     this.setState({
-      flow: event.target.value
+      flow: flow,
+      results: results
     });
   };
 
@@ -34,7 +54,7 @@ class Question4 extends Component {
     event.preventDefault();
 
     if (this.state.flow) {
-      this.setState({ 
+      this.setState({
         navigate: true
       })
     } else {
@@ -55,11 +75,11 @@ class Question4 extends Component {
             <label>
               <input
                 type="radio"
-                value="yes"
-                checked={flow === "yes"}
+                value="light"
+                checked={flow === "light"}
                 onChange={this.handleChange}
               />
-              Yes
+              Light
             </label>
           </li>
 
@@ -67,11 +87,23 @@ class Question4 extends Component {
             <label>
               <input
                 type="radio"
-                value="no"
-                checked={flow === "no"}
+                value="regular"
+                checked={flow === "regular"}
                 onChange={this.handleChange}
               />
-              No
+              Regular
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input
+                type="radio"
+                value="heavy"
+                checked={flow === "heavy"}
+                onChange={this.handleChange}
+              />
+              Heavy
             </label>
           </li>
         </ul>

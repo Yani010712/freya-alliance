@@ -12,7 +12,7 @@ class Question1 extends Component {
   }
 
   componentDidMount = () => {
-    const json = sessionStorage.getItem("age");
+    const json = sessionStorage.getItem('age');
     const age = JSON.parse(json);
     if (age) {
       this.setState({ age: age });
@@ -22,11 +22,32 @@ class Question1 extends Component {
   componentDidUpdate = () => {
     const age = JSON.stringify(this.state.age);
     sessionStorage.setItem("age", age);
+    if (this.state.results) {
+      const results = JSON.stringify(this.state.results);
+      sessionStorage.setItem("results", results);
+    }
   };
 
   handleChange = event => {
+    const age = event.target.value;
+    let results = {
+      size: 'M',
+      capacity: 'M',
+      firmness: 'M'
+    };
+    switch (age) {
+      case 'under20':
+        results.capacity = 'S';
+        results.size = 'XS';
+        break;
+      case '36+':
+        results.capacity = 'L';
+        break;
+      default:
+    }
     this.setState({
-      age: event.target.value
+      age: age,
+      results: results
     });
   };
 
@@ -34,7 +55,7 @@ class Question1 extends Component {
     event.preventDefault();
 
     if (this.state.age) {
-      this.setState({ 
+      this.setState({
         navigate: true
       })
     } else {
@@ -43,10 +64,10 @@ class Question1 extends Component {
   };
 
   render() {
-    const { age, navigate } = this.state; 
-      if (navigate) {
-        return <Redirect to="/quiz/question2" push={true} />
-      }
+    const { age, navigate } = this.state;
+    if (navigate) {
+      return <Redirect to="/quiz/question2" push={true} />
+    }
     return (
       <form onSubmit={this.handleSubmit}>
         <p>Select Your Age</p>
@@ -55,11 +76,11 @@ class Question1 extends Component {
             <label>
               <input
                 type="radio"
-                value="under17"
-                checked={age === "under17"}
+                value="under20"
+                checked={age === "under20"}
                 onChange={this.handleChange}
               />
-              Under 17
+              Under 20
             </label>
           </li>
 
@@ -67,11 +88,11 @@ class Question1 extends Component {
             <label>
               <input
                 type="radio"
-                value="17-30"
-                checked={age === "17-30"}
+                value="20-35"
+                checked={age === "20-35"}
                 onChange={this.handleChange}
               />
-              17-30
+              20-35
             </label>
           </li>
 
@@ -79,23 +100,11 @@ class Question1 extends Component {
             <label>
               <input
                 type="radio"
-                value="31-40"
-                checked={age === "31-40"}
+                value="36+"
+                checked={age === "36+"}
                 onChange={this.handleChange}
               />
-              31-40
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="41+"
-                checked={age === "41+"}
-                onChange={this.handleChange}
-              />
-              41+
+              36+
             </label>
           </li>
         </ul>

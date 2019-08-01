@@ -22,11 +22,30 @@ class Question6 extends Component {
   componentDidUpdate = () => {
     const cervical = JSON.stringify(this.state.cervical);
     sessionStorage.setItem("cervical", cervical);
+    if (this.state.results) {
+      const results = JSON.stringify(this.state.results);
+      sessionStorage.setItem("results", results);
+    }
   };
 
   handleChange = event => {
+    const cervical = event.target.value;
+    const resultsJson = sessionStorage.getItem("results");
+    const results = JSON.parse(resultsJson);
+
+    switch (cervical) {
+      case 'low':
+        results.size = 'S';
+        results.firmness = 'S';
+        break;
+      case 'high':
+        results.size = 'L';
+        break;
+      default:
+    }
     this.setState({
-      cervical: event.target.value
+      cervical: cervical,
+      results: results
     });
   };
 
@@ -34,7 +53,7 @@ class Question6 extends Component {
     event.preventDefault();
 
     if (this.state.cervical) {
-      this.setState({ 
+      this.setState({
         navigate: true
       })
     } else {
