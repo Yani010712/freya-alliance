@@ -14,20 +14,34 @@ class Question3 extends Component {
   componentDidMount = () => {
     const json = sessionStorage.getItem("bladder");
     const bladder = JSON.parse(json);
-    
     if (bladder) {
-      this.setState({bladder: bladder });
+      this.setState({ bladder: bladder });
     }
   };
 
   componentDidUpdate = () => {
     const bladder = JSON.stringify(this.state.bladder);
     sessionStorage.setItem("bladder", bladder);
+    if (this.state.results) {
+      const results = JSON.stringify(this.state.results);
+      sessionStorage.setItem("results", results);
+    }
   };
 
   handleChange = event => {
+    const bladder = event.target.value;
+    const resultsJson = sessionStorage.getItem("results");
+    const results = JSON.parse(resultsJson);
+
+    switch (bladder) {
+      case 'yes':
+        results.firmness = 'S';
+        break;
+      default:
+    }
     this.setState({
-      bladder: event.target.value
+      bladder: bladder,
+      results: results
     });
   };
 
@@ -35,7 +49,7 @@ class Question3 extends Component {
     event.preventDefault();
 
     if (this.state.bladder) {
-      this.setState({ 
+      this.setState({
         navigate: true
       })
     } else {

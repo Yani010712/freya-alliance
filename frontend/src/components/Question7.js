@@ -22,11 +22,29 @@ class Question7 extends Component {
   componentDidUpdate = () => {
     const budget = JSON.stringify(this.state.budget);
     sessionStorage.setItem("budget", budget);
+    if (this.state.results) {
+      const results = JSON.stringify(this.state.results);
+      sessionStorage.setItem("results", results);
+    }
   };
 
   handleChange = event => {
+    const budget = event.target.value;
+    const resultsJson = sessionStorage.getItem("results");
+    const results = JSON.parse(resultsJson);
+
+    switch (budget) {
+      case '15-35':
+        results.price = 35;
+        break;
+      case '35-45':
+        results.price = 45;
+        break;
+      default:
+    }
     this.setState({
-      budget: event.target.value
+      budget: budget,
+      results: results
     });
   };
 
@@ -34,7 +52,7 @@ class Question7 extends Component {
     event.preventDefault();
 
     if (this.state.budget) {
-      this.setState({ 
+      this.setState({
         navigate: true
       })
     } else {
@@ -45,7 +63,7 @@ class Question7 extends Component {
   render() {
     const { budget, navigate } = this.state;
     if (navigate) {
-      return <Redirect to="/quiz/question6" push={true} />;
+      return <Redirect to="/quiz/results" push={true} />;
     }
     return (
       <form onSubmit={this.handleSubmit}>
@@ -55,23 +73,33 @@ class Question7 extends Component {
             <label>
               <input
                 type="radio"
-                value="yes"
-                checked={budget === "yes"}
+                value="15-35"
+                checked={budget === "15-35"}
                 onChange={this.handleChange}
               />
-              Yes
+              $15 - $35
             </label>
           </li>
-
           <li>
             <label>
               <input
                 type="radio"
-                value="no"
-                checked={budget === "no"}
+                value="35-45"
+                checked={budget === "35-45"}
                 onChange={this.handleChange}
               />
-              No
+              $35 - $45
+            </label>
+          </li>
+          <li>
+            <label>
+              <input
+                type="radio"
+                value="45+"
+                checked={budget === "45+"}
+                onChange={this.handleChange}
+              />
+              $45+
             </label>
           </li>
         </ul>
@@ -80,7 +108,7 @@ class Question7 extends Component {
           Back
         </Link>
         <button name="next" className="btn btn-dark" type="submit">
-          Next
+          Show Results
         </button>
       </form>
     );

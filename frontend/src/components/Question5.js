@@ -22,11 +22,26 @@ class Question5 extends Component {
   componentDidUpdate = () => {
     const birth = JSON.stringify(this.state.birth);
     sessionStorage.setItem("birth", birth);
+    if (this.state.results) {
+      const results = JSON.stringify(this.state.results);
+      sessionStorage.setItem("results", results);
+    }
   };
 
   handleChange = event => {
+    const birth = event.target.value;
+    const resultsJson = sessionStorage.getItem("results");
+    const results = JSON.parse(resultsJson);
+
+    switch (birth) {
+      case 'yes':
+        results.size = 'L';
+        break;
+      default:
+    }
     this.setState({
-      birth: event.target.value
+      birth: birth,
+      results: results
     });
   };
 
@@ -34,7 +49,7 @@ class Question5 extends Component {
     event.preventDefault();
 
     if (this.state.birth) {
-      this.setState({ 
+      this.setState({
         navigate: true
       })
     } else {
