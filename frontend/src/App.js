@@ -16,6 +16,8 @@ import Question6 from "./components/Question6";
 import Question7 from "./components/Question7";
 import News from "./components/News";
 import Results from "./components/Results";
+import Reviews from "./components/Reviews";
+
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path="/quiz/results" component={Results} />
           <Route path="/quiz" component={Quiz} />
           <Route path="/news" component={News} />
+          <Route path="/reviews" component={Reviews} />
+
         </Switch>
       </BrowserRouter>
     </div>
