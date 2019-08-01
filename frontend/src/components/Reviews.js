@@ -18,7 +18,41 @@ const useStyles = makeStyles({
 
 });
 
+let cards = [];
+for (let i = 0; i < 24; i++)
+{
+  cards.push(
+    <Grid item xs={6} sm={3}>
+          <Card>
+            <CardContent>
+​
+              <TextareaAutosize
+                rowsMax={6}
+                aria-label="maximum height"
+                placeholder="Write your review here"
+                defaultValue=""
+              />
+​
+            </CardContent>
+          <CardActions>
+            <i class="material-icons">
+              thumb_up_alt
+            </i>
+            <Button size="small">Submit</Button>
+            <TextareaAutosize
+              rowsMax={4}
+              aria-label="maximum height"
+              placeholder="For site developers only..."
+              defaultValue=""
+            />
+          </CardActions>
+        </Card>
+    </Grid>
+  );
+}
+
 class Reviews extends Component {
+
     render() {
         return (
             <div>
@@ -26,137 +60,8 @@ class Reviews extends Component {
                 <br></br>
                 <br></br>
                 <Grid container spacing={3}>
-                    <Grid item xs={6} sm={3}>
-                          <Card>
-                						<CardContent>
-              ​
-                							<TextareaAutosize
-                								rowsMax={6}
-                								aria-label="maximum height"
-                								placeholder="Write your review here"
-                								defaultValue=""
-                							/>
-              ​
-                						</CardContent>
-              						<CardActions>
-              							<i class="material-icons">
-              								thumb_up_alt
-              							</i>
-              						  <Button size="small">Submit</Button>
-              							<TextareaAutosize
-              								rowsMax={4}
-              								aria-label="maximum height"
-              								placeholder="For site developers only..."
-              								defaultValue=""
-              							/>
-              						</CardActions>
-              					</Card>
-                    </Grid>
-                    <Grid item xs xs={6} sm={3}>
-                        <Card>
-                          <CardContent>
-            ​
-                            <TextareaAutosize
-                              rowsMax={6}
-                              aria-label="maximum height"
-                              placeholder="Write your review here"
-                              defaultValue=""
-                            />
-            ​
-                          </CardContent>
-                        <CardActions>
-                          <i class="material-icons">
-                            thumb_up_alt
-                          </i>
-                          <Button size="small">Submit</Button>
-                          <TextareaAutosize
-                            rowsMax={4}
-                            aria-label="maximum height"
-                            placeholder="For site developers only..."
-                            defaultValue=""
-                          />
-                        </CardActions>
-                      </Card>
-                  </Grid>
-                  <Grid item xs xs={6} sm={3}>
-                      <Card>
-                        <CardContent>
-          ​
-                          <TextareaAutosize
-                            rowsMax={6}
-                            aria-label="maximum height"
-                            placeholder="Write your review here"
-                            defaultValue=""
-                          />
-          ​
-                        </CardContent>
-                      <CardActions>
-                        <i class="material-icons">
-                          thumb_up_alt
-                        </i>
-                        <Button size="small">Submit</Button>
-                        <TextareaAutosize
-                          rowsMax={4}
-                          aria-label="maximum height"
-                          placeholder="For site developers only..."
-                          defaultValue=""
-                        />
-                      </CardActions>
-                    </Card>
+                    {cards}
                 </Grid>
-                  <Grid item xs xs={6} sm={3}>
-                      <Card>
-                        <CardContent>
-          ​
-                          <TextareaAutosize
-                            rowsMax={6}
-                            aria-label="maximum height"
-                            placeholder="Write your review here"
-                            defaultValue=""
-                          />
-          ​
-                        </CardContent>
-                      <CardActions>
-                        <i class="material-icons">
-                          thumb_up_alt
-                        </i>
-                        <Button size="small">Submit</Button>
-                        <TextareaAutosize
-                          rowsMax={4}
-                          aria-label="maximum height"
-                          placeholder="For site developers only..."
-                          defaultValue=""
-                        />
-                      </CardActions>
-                    </Card>
-                </Grid>
-                  <Grid item xs xs={6} sm={3}>
-                      <Card>
-                        <CardContent>
-          ​
-                          <TextareaAutosize
-                            rowsMax={6}
-                            aria-label="maximum height"
-                            placeholder="Write your review here"
-                            defaultValue=""
-                          />
-          ​
-                        </CardContent>
-                      <CardActions>
-                        <i class="material-icons">
-                          thumb_up_alt
-                        </i>
-                        <Button size="small">Submit</Button>
-                        <TextareaAutosize
-                          rowsMax={4}
-                          aria-label="maximum height"
-                          placeholder="For site developers only..."
-                          defaultValue=""
-                        />
-                      </CardActions>
-                    </Card>
-                </Grid>
-              </Grid>
             </div>
         );
     }
