@@ -20,7 +20,7 @@ const Navigation = () => {
             <NavLink className="nav-item nav-link" to="/#news">
               News
             </NavLink>
-            <NavLink className="nav-item nav-link" to="/#reviews">
+            <NavLink className="nav-item nav-link" to="/reviews">
               Reviews
             </NavLink>
             <NavLink className="nav-item nav-link" to="/quiz">

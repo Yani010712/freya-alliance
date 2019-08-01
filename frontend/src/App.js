@@ -16,6 +16,7 @@ import Question6 from "./components/Question6";
 import Question7 from "./components/Question7";
 import ProductList from "./components/ProductList";
 import News from "./components/News";
+import Reviews from "./components/Reviews";
 
 
 
@@ -36,7 +37,8 @@ function App() {
           <Route path="/quiz" component={Quiz} />
           <Route path="/productList" component={ProductList} />
           <Route path="/news" component={News} />
-          
+          <Route path="/reviews" component={Reviews} />
+
         </Switch>
       </BrowserRouter>
     </div>
