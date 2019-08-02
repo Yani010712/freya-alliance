@@ -21,7 +21,7 @@ const Navigation = ({ showModal }) => {
             <NavLink className="nav-item nav-link" to="/#reviews">
               Reviews
             </NavLink>
-            <NavLink href="#" className="nav-item nav-link" onClick={showModal}>
+            <NavLink to="#" className="nav-item nav-link" onClick={showModal}>
               Quiz
             </NavLink>
           </div>

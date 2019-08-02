@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Question1 from "./components/Question1";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
@@ -75,8 +74,6 @@ class App extends Component {
   }
 }
 
-const container = document.createElement("div");
-document.body.appendChild(container);
-ReactDOM.render(<App />, container);
+
 
 export default App;
