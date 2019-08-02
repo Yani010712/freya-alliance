@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Product from './Product';
+import Grid from '@material-ui/core/Grid';
 
 class Results extends Component {
     constructor(props) {
@@ -35,10 +36,15 @@ class Results extends Component {
 
     render() {
         return (
-            <div >
+            <div className="grid-container">
+                <Grid container spacing={3}>
+                
+
                 {this.state.list.map((product, index) => (
                     <Product key={index} product={product} />
                 ))}
+                </Grid>
+                
             </div>
         );
     }
