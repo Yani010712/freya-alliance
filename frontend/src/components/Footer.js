@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import OurStory from './OurStory';
 import ContactUs from './ContactUs';
+import './Footer.css';
+import CopyRight from './CopyRight';
 
 
 class Footer extends Component {
     render() {
         return (
             <div>
-              <OurStory/>
-              <ContactUs></ContactUs>
-               <p>The Freya Alliance - All rights reserved</p>  
+                <div className="footer-freya">
+                    <div><OurStory/></div>
+                    <div><ContactUs/></div>  
+                </div>
+                <CopyRight />
+
             </div>
+            
+
         );
     }
 }

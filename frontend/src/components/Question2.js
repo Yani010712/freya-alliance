@@ -1,5 +1,11 @@
+import "../App.css";
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { FormControl, CardActions } from "@material-ui/core";
+
 
 class Question2 extends Component {
   constructor(props) {
@@ -59,58 +65,34 @@ class Question2 extends Component {
 
   render() {
     const { activity, navigate } = this.state;
+
     if (navigate) {
       return <Redirect to="/quiz/question3" push={true} />;
     }
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>Physical Activity</p>
-        <p>Pick one that best describes your lifestyle</p>
-        <ul>
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="sedentary"
-                checked={activity === "sedentary"}
-                onChange={this.handleChange}
-              />
-              Sedentary
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="moderate"
-                checked={activity === "moderate"}
-                onChange={this.handleChange}
-              />
-              Moderate Activity
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="active"
-                checked={activity === "active"}
-                onChange={this.handleChange}
-              />
-              Very Active
-            </label>
-          </li>
-        </ul>
-
-        <Link className="btn btn-dark" to="/quiz/question1">
-          Back
+      <FormControl component="form" onSubmit={this.handleSubmit}>
+        <br /><br />
+        <h3>Physical Activity</h3>
+        <br /><br />
+        <RadioGroup
+          onChange={this.handleChange}>
+          <FormControlLabel value="sedentary"
+            control={<Radio checked={activity === "sedentary"} />} label="Sedentary" />
+          <FormControlLabel value="moderate"
+            control={<Radio checked={activity === "moderate"} />} label="Moderate Activity" />
+          <FormControlLabel value="active"
+            control={<Radio checked={activity === "active"} />} label="Very Active" />
+        </RadioGroup>
+        <br /><br />
+        <CardActions>
+          <Link className="btn btn-dark mr-2" to="/quiz/question1">
+            Back
         </Link>
-        <button name="next" className="btn btn-dark" type="submit">
-          Next
+          <button name="next" className="btn btn-dark ml-2" type="submit">
+            Next
         </button>
-      </form>
+        </CardActions>
+      </FormControl>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import { FormControl, RadioGroup, FormControlLabel, Radio, CardActions } from "@material-ui/core";
 
 class Question1 extends Component {
   constructor(props) {
@@ -69,48 +70,24 @@ class Question1 extends Component {
       return <Redirect to="/quiz/question2" push={true} />
     }
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>Select Your Age</p>
-        <ul>
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="under20"
-                checked={age === "under20"}
-                onChange={this.handleChange}
-              />
-              Under 20
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="20-35"
-                checked={age === "20-35"}
-                onChange={this.handleChange}
-              />
-              20-35
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="36+"
-                checked={age === "36+"}
-                onChange={this.handleChange}
-              />
-              36+
-            </label>
-          </li>
-        </ul>
-
-        <button className="btn btn-dark" type="submit">Next</button>
-      </form>
+      <FormControl component="form" onSubmit={this.handleSubmit}>
+        <br /><br />
+        <h3>Select Your Age</h3>
+        <br /><br />
+        <RadioGroup
+          onChange={this.handleChange}>
+          <FormControlLabel value="under20"
+            control={<Radio checked={age === "under20"} />} label="Under 20" />
+          <FormControlLabel value="20-35"
+            control={<Radio checked={age === "20-35"} />} label="20-35" />
+          <FormControlLabel value="36+"
+            control={<Radio checked={age === "36+"} />} label="36+" />
+        </RadioGroup>
+        <br /><br />
+        <CardActions>
+          <button name="next" className="btn btn-dark ml-5" type="submit">Next</button>
+        </CardActions>
+      </FormControl>
     );
   }
 }

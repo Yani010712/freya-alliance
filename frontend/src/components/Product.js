@@ -5,6 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 class Product extends Component {
 
@@ -17,8 +18,9 @@ class Product extends Component {
 
     return (
       <div>
+      
         <Card className={classes.card}>
-          <a href={this.props.product.url}>
+          <a target="_blank" rel="noopener noreferrer" href={this.props.product.url}>
             <CardMedia
               component="img"
               alt={this.props.product.brand}
@@ -32,6 +34,7 @@ class Product extends Component {
             </Typography>
           </CardContent>
         </Card>
+        
       </div>
     );
   }
