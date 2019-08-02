@@ -2,7 +2,7 @@ import React from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import Logo from './Logo';
 
-const Navigation = () => {
+const Navigation = ({ showModal }) => {
   return (
     <div>
       <nav className="navbar-pink navbar navbar-expand-lg navbar-light bg-dark fixed-top">
@@ -21,7 +21,7 @@ const Navigation = () => {
             <NavLink className="nav-item nav-link" to="/#reviews">
               Reviews
             </NavLink>
-            <NavLink className="nav-item nav-link" to="/quiz">
+            <NavLink href="#" className="nav-item nav-link" onClick={showModal}>
               Quiz
             </NavLink>
           </div>

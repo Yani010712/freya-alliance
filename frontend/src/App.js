@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Question1 from "./components/Question1";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -16,28 +17,66 @@ import Question6 from "./components/Question6";
 import Question7 from "./components/Question7";
 import News from "./components/News";
 import Results from "./components/Results";
+import Modal from "./components/Modal";
 
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Navigation />
-        <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/quiz/question1" component={Question1} />
-          <Route path="/quiz/question2" component={Question2} />
-          <Route path="/quiz/question3" component={Question3} />
-          <Route path="/quiz/question4" component={Question4} />
-          <Route path="/quiz/question5" component={Question5} />
-          <Route path="/quiz/question6" component={Question6} />
-          <Route path="/quiz/question7" component={Question7} />
-          <Route path="/quiz/results" component={Results} />
-          <Route path="/quiz" component={Quiz} />
-          <Route path="/news" component={News} />
-        </Switch>
-      </BrowserRouter>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { show: false };
+  }
+
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
+  modalQuestion = (component) => {
+    return (
+      <Modal show={this.state.show} handleClose={this.hideModal}>
+        {component}
+      </Modal>
+    );
+  }
+
+  render() {
+    let redirect;
+    if (this.state.show) {
+      redirect = '';
+    } else {
+      redirect = <Redirect to="/" push={true} />;
+    }
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <Modal show={this.state.show} handleClose={this.hideModal}>
+            <Quiz />
+          </Modal>
+          <Navigation showModal={this.showModal} />
+          <Switch>
+            <Route exact path="/" render={props => <Main {...props} showModal={this.showModal} />} />
+            <Route path="/quiz/question1" render={props => this.modalQuestion(<Question1 />)} />
+            <Route path="/quiz/question2" render={props => this.modalQuestion(<Question2 />)} />
+            <Route path="/quiz/question3" render={props => this.modalQuestion(<Question3 />)} />
+            <Route path="/quiz/question4" render={props => this.modalQuestion(<Question4 />)} />
+            <Route path="/quiz/question5" render={props => this.modalQuestion(<Question5 />)} />
+            <Route path="/quiz/question6" render={props => this.modalQuestion(<Question6 />)} />
+            <Route path="/quiz/question7" render={props => this.modalQuestion(<Question7 />)} />
+            <Route path="/quiz/results" render={props => this.modalQuestion(<Results />)} />
+            <Route path="/news" component={News} />
+          </Switch>
+          {redirect}
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
+
+const container = document.createElement("div");
+document.body.appendChild(container);
+ReactDOM.render(<App />, container);
 
 export default App;

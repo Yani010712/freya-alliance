@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
+import { FormControl, RadioGroup, FormControlLabel, Radio, CardActions } from "@material-ui/core";
 
 class Question4 extends Component {
   constructor(props) {
@@ -68,53 +69,29 @@ class Question4 extends Component {
       return <Redirect to="/quiz/question5" push={true} />;
     }
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>Flow Volume</p>
-        <ul>
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="light"
-                checked={flow === "light"}
-                onChange={this.handleChange}
-              />
-              Light
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="regular"
-                checked={flow === "regular"}
-                onChange={this.handleChange}
-              />
-              Regular
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="heavy"
-                checked={flow === "heavy"}
-                onChange={this.handleChange}
-              />
-              Heavy
-            </label>
-          </li>
-        </ul>
-
-        <Link className="btn btn-dark" to="/quiz/question3">
-          Back
-        </Link>
-        <button name="next" className="btn btn-dark" type="submit">
-          Next
-        </button>
-      </form>
+      <FormControl component="form" onSubmit={this.handleSubmit}>
+        <br /><br />
+        <h3>Flow Volume</h3>
+        <br /><br />
+        <RadioGroup
+          onChange={this.handleChange}>
+          <FormControlLabel value="light"
+            control={<Radio checked={flow === "light"} />} label="Light" />
+          <FormControlLabel value="regular"
+            control={<Radio checked={flow === "regular"} />} label="Regular" />
+          <FormControlLabel value="heavy"
+            control={<Radio checked={flow === "heavy"} />} label="Heavy" />
+        </RadioGroup>
+        <br /><br />
+        <CardActions>
+          <Link className="btn btn-dark mr-2" to="/quiz/question3">
+            Back
+          </Link>
+          <button name="next" className="btn btn-dark ml-2" type="submit">
+            Next
+          </button>
+        </CardActions>
+      </FormControl>
     );
   }
 }

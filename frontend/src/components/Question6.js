@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
+import { FormControl, RadioGroup, FormControlLabel, Radio, CardActions } from "@material-ui/core";
 
 class Question6 extends Component {
   constructor(props) {
@@ -67,53 +68,29 @@ class Question6 extends Component {
       return <Redirect to="/quiz/question7" push={true} />;
     }
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>Cervical Height</p>
-        <ul>
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="low"
-                checked={cervical === "low"}
-                onChange={this.handleChange}
-              />
-              Low
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="regular"
-                checked={cervical === "regular"}
-                onChange={this.handleChange}
-              />
-              Regular
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="high"
-                checked={cervical === "high"}
-                onChange={this.handleChange}
-              />
-              High
-            </label>
-          </li>
-        </ul>
-
-        <Link className="btn btn-dark" to="/quiz/question5">
-          Back
-        </Link>
-        <button name="next" className="btn btn-dark" type="submit">
-          Next
-        </button>
-      </form>
+      <FormControl component="form" onSubmit={this.handleSubmit}>
+        <br /><br />
+        <h3>Cervical Height</h3>
+        <br /><br />
+        <RadioGroup
+          onChange={this.handleChange}>
+          <FormControlLabel value="low"
+            control={<Radio checked={cervical === "low"} />} label="Low" />
+          <FormControlLabel value="regular"
+            control={<Radio checked={cervical === "regular"} />} label="Regular" />
+          <FormControlLabel value="high"
+            control={<Radio checked={cervical === "high"} />} label="High" />
+        </RadioGroup>
+        <br /><br />
+        <CardActions>
+          <Link className="btn btn-dark mr-2" to="/quiz/question5">
+            Back
+          </Link>
+          <button name="next" className="btn btn-dark ml-2" type="submit">
+            Next
+          </button>
+        </CardActions>
+      </FormControl>
     );
   }
 }

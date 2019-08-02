@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import ProductCarousel from './ProductCarousel';
 import Home from './Home';
 import OurMission from './OurMission';
@@ -8,14 +7,12 @@ import Articles from './Articles';
 import PanoramicSection from './PanoramicSection';
 
 
-
-
 class Main extends Component {
   render() {
     return (
       <div className="container">
         <div id="home" className="home-section">
-          <Home/>
+          <Home showModal={this.props.showModal} />
         </div>
         <br />
         <br />
@@ -30,7 +27,7 @@ class Main extends Component {
         <br />
         <br />
         <div className="ourMision">
-         <OurMission/>
+          <OurMission />
         </div>
         <br />
         <br />
@@ -52,11 +49,11 @@ class Main extends Component {
         <div className="clearfix mb-4">
           <h2 id="products" className="mb-4">Recommended Products</h2>
           <ProductCarousel />
-          <br/>
+          <br />
         </div>
-        <br/>
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <br />
         <div>
           <h2>Articles</h2>
           <Articles />
@@ -88,7 +85,7 @@ class Main extends Component {
         </div>
         <br />
         <div>
-          <Footer/>
+          <Footer />
         </div>
         <br />
         <br />

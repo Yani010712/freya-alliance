@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
+import { FormControl, RadioGroup, FormControlLabel, Radio, CardActions } from "@material-ui/core";
 
 class Question5 extends Component {
   constructor(props) {
@@ -63,41 +64,27 @@ class Question5 extends Component {
       return <Redirect to="/quiz/question6" push={true} />;
     }
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>Birth</p>
-        <ul>
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="yes"
-                checked={birth === "yes"}
-                onChange={this.handleChange}
-              />
-              Yes
-            </label>
-          </li>
-
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="no"
-                checked={birth === "no"}
-                onChange={this.handleChange}
-              />
-              No
-            </label>
-          </li>
-        </ul>
-
-        <Link className="btn btn-dark" to="/quiz/question4">
-          Back
-        </Link>
-        <button name="next" className="btn btn-dark" type="submit">
-          Next
-        </button>
-      </form>
+      <FormControl component="form" onSubmit={this.handleSubmit}>
+        <br /><br />
+        <h3>Birth</h3>
+        <br /><br />
+        <RadioGroup
+          onChange={this.handleChange}>
+          <FormControlLabel value="yes"
+            control={<Radio checked={birth === "yes"} />} label="Yes" />
+          <FormControlLabel value="no"
+            control={<Radio checked={birth === "no"} />} label="No" />
+        </RadioGroup>
+        <br /><br />
+        <CardActions>
+          <Link className="btn btn-dark mr-2" to="/quiz/question4">
+            Back
+          </Link>
+          <button name="next" className="btn btn-dark ml-2" type="submit">
+            Next
+          </button>
+        </CardActions>
+      </FormControl>
     );
   }
 }

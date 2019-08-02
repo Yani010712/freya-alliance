@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
+import { FormControl, RadioGroup, FormControlLabel, Radio, CardActions } from "@material-ui/core";
 
 class Question7 extends Component {
   constructor(props) {
@@ -66,51 +67,29 @@ class Question7 extends Component {
       return <Redirect to="/quiz/results" push={true} />;
     }
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>Budget</p>
-        <ul>
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="15-35"
-                checked={budget === "15-35"}
-                onChange={this.handleChange}
-              />
-              $15 - $35
-            </label>
-          </li>
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="35-45"
-                checked={budget === "35-45"}
-                onChange={this.handleChange}
-              />
-              $35 - $45
-            </label>
-          </li>
-          <li>
-            <label>
-              <input
-                type="radio"
-                value="45+"
-                checked={budget === "45+"}
-                onChange={this.handleChange}
-              />
-              $45+
-            </label>
-          </li>
-        </ul>
-
-        <Link className="btn btn-dark" to="/quiz/question6">
-          Back
-        </Link>
-        <button name="next" className="btn btn-dark" type="submit">
-          Show Results
-        </button>
-      </form>
+      <FormControl component="form" onSubmit={this.handleSubmit}>
+        <br /><br />
+        <h3>Budget</h3>
+        <br /><br />
+        <RadioGroup
+          onChange={this.handleChange}>
+          <FormControlLabel value="15-35"
+            control={<Radio checked={budget === "15-35"} />} label="$15 - $35" />
+          <FormControlLabel value="35-45"
+            control={<Radio checked={budget === "35-45"} />} label="$35 - $45" />
+          <FormControlLabel value="45+"
+            control={<Radio checked={budget === "45+"} />} label="$45+" />
+        </RadioGroup>
+        <br /><br />
+        <CardActions>
+          <Link className="btn btn-dark mr-2" to="/quiz/question6">
+            Back
+          </Link>
+          <button name="next" className="btn btn-dark ml-2" type="submit">
+            Show Results
+          </button>
+        </CardActions>
+      </FormControl>
     );
   }
 }

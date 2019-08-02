@@ -20,7 +20,7 @@ class Product extends Component {
       <div>
       
         <Card className={classes.card}>
-          <a href={this.props.product.url}>
+          <a target="_blank" rel="noopener noreferrer" href={this.props.product.url}>
             <CardMedia
               component="img"
               alt={this.props.product.brand}
