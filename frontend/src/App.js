@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import Main from "./components/Main";
-import Navigation from "./components/Navigation";
+import NavBar from "./components/NavBar";
 import Quiz from "./components/Quiz";
 import Question2 from "./components/Question2";
 import Question3 from "./components/Question3";
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navigation />
+        <NavBar />
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/quiz/question1" component={Question1} />
@@ -36,6 +36,8 @@ function App() {
           <Route path="/news" component={News} />
         </Switch>
       </BrowserRouter>
+      <script src="js/jquery.js"></script>
+      <script src="js/navshrink.js"></script>
     </div>
   );
 }
