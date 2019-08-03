@@ -16,8 +16,6 @@ class Footer extends Component {
                 <CopyRight />
 
             </div>
-            
-
         );
     }
 }

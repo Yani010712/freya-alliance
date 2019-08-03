@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import Main from "./components/Main";
-import NavBar from "./components/NavBar";
+import Navigation from "./components/Navigation";
 import Quiz from "./components/Quiz";
 import Question2 from "./components/Question2";
 import Question3 from "./components/Question3";
@@ -73,7 +73,7 @@ class App extends Component {
       </div>
     );
   }
->>>>>>> master
+
 }
 
 
