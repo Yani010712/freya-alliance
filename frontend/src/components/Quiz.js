@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { Button } from "@material-ui/core";
+
 class Quiz extends Component {
     render() {
         return (
@@ -10,7 +12,17 @@ class Quiz extends Component {
                 <br /><br />
                 <p>Please answer each question to the best of your abilities in order to provide you with the best options</p>
                 <br /><br />
-                <Link className="btn btn-dark" to="/quiz/question1">Start</Link>
+                    <Button
+                        component={Link}
+                        name="next"
+                        variant="contained"
+                        color="primary"
+                        type="submit"
+                        size="large"
+                        to="/quiz/question1"
+                    >
+                        Start
+                    </Button>
                 <br />
             </div>
         );

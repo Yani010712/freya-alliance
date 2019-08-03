@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
-import { FormControl, RadioGroup, FormControlLabel, Radio, CardActions } from "@material-ui/core";
+import { FormControl, RadioGroup, FormControlLabel, Radio, CardActions, Button } from "@material-ui/core";
 
 class Question4 extends Component {
   constructor(props) {
@@ -84,12 +84,27 @@ class Question4 extends Component {
         </RadioGroup>
         <br /><br />
         <CardActions>
-          <Link className="btn btn-dark mr-2" to="/quiz/question3">
+          <Button
+            name="back"
+            variant="contained"
+            color="primary"
+            type="submit"
+            size="large"
+            component={Link}
+            to="/quiz/question3"
+          >
             Back
-          </Link>
-          <button name="next" className="btn btn-dark ml-2" type="submit">
+          </Button>
+
+          <Button
+            name="next"
+            variant="contained"
+            color="primary"
+            type="submit"
+            size="large"
+          >
             Next
-          </button>
+          </Button>
         </CardActions>
       </FormControl>
     );

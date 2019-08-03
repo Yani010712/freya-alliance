@@ -4,7 +4,7 @@ import { Redirect, Link } from "react-router-dom";
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { FormControl, CardActions } from "@material-ui/core";
+import { FormControl, CardActions, Button } from "@material-ui/core";
 
 
 class Question2 extends Component {
@@ -85,12 +85,28 @@ class Question2 extends Component {
         </RadioGroup>
         <br /><br />
         <CardActions>
-          <Link className="btn btn-dark mr-2" to="/quiz/question1">
+
+          <Button
+            name="back"
+            variant="contained"
+            color="primary"
+            type="submit"
+            size="large"
+            component={Link}
+            to="/quiz/question1"
+          >
             Back
-        </Link>
-          <button name="next" className="btn btn-dark ml-2" type="submit">
+          </Button>
+
+          <Button
+            name="next"
+            variant="contained"
+            color="primary"
+            type="submit"
+            size="large"
+          >
             Next
-        </button>
+          </Button>
         </CardActions>
       </FormControl>
     );

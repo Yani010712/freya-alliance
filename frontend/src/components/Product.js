@@ -12,30 +12,26 @@ class Product extends Component {
   render() {
     const classes = makeStyles({
       card: {
-        maxWidth: 200,
+        // maxWidth: 200,
       },
     });
 
     return (
-      <div>
-      
-        <Card className={classes.card}>
-          <a target="_blank" rel="noopener noreferrer" href={this.props.product.url}>
-            <CardMedia
-              component="img"
-              alt={this.props.product.brand}
-              height="150"
-              image={this.props.product.image}
-              title={this.props.product.brand} />
-          </a>
-          <CardContent>
-            <Typography gutterBottom subtitle2="h5" component="h5">
-              {this.props.product.brand}
-            </Typography>
-          </CardContent>
-        </Card>
-        
-      </div>
+      <Card className={classes.card}>
+        <a target="_blank" rel="noopener noreferrer" href={this.props.product.url}>
+          <CardMedia
+            component="img"
+            alt={this.props.product.brand}
+            height="150"
+            image={this.props.product.image}
+            title={this.props.product.brand} />
+        </a>
+        <CardContent>
+          <Typography gutterBottom subtitle2="h5" component="h5">
+            {this.props.product.brand}
+          </Typography>
+        </CardContent>
+      </Card>
     );
   }
 }

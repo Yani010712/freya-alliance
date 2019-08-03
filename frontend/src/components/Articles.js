@@ -19,7 +19,8 @@ export default function ImgMediaCard() {
   const classes = useStyles();
 
   return (
-    <div className="grid-container">
+    <div className="grid-container" style={{ marginTop: 40, marginBottom: 80}}>
+      <h2>Articles</h2>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
           <Card className={classes.card}>
