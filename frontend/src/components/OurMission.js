@@ -71,7 +71,8 @@ const OurMission = ({classes}) => (
                 Sustainable
             </Typography>
             <Typography variant="h5">
-                From the latest trendy boutique hotel to the iconic palace with XXL pool
+            Up to 90% of each pad and tampon is composed of plastic, most of which break down into micro-plastics. On average, individuals use approximately 11,000 pads and tampons. That’s 
+250 to 300 pounds of plastic waste per person! 
             </Typography>
           </div>
         </Grid>
@@ -82,7 +83,7 @@ const OurMission = ({classes}) => (
               Affordable
             </Typography>
             <Typography variant="h5">
-                Privatize a pool, take a Japanese bath or wake up in 900m2 of garden...
+            By adopting the use of a menstrual cup, individuals save an average of $7,800 in their lifetimes! 
             </Typography>
           </div>
         </Grid>
@@ -93,7 +94,7 @@ const OurMission = ({classes}) => (
               Convenient
             </Typography>
             <Typography variant="h5">
-              By registering, you will access specially negotiated rates
+            Menstrual cups can last up to 12 hours before needing to be emptied, depending on your flow. 
             </Typography>
           </div>
         </Grid>
