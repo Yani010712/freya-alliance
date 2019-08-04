@@ -1,51 +1,40 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { withStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
-import AppBar from '../theme/components/AppBar';
-import Toolbar, { styles as toolbarStyles } from '../theme/components/Toolbar';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Link from "@material-ui/core/Link";
+import AppBar from "../theme/components/AppBar";
+import Toolbar, { styles as toolbarStyles } from "../theme/components/Toolbar";
+import Button from "@material-ui/core/Button";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const styles = theme => ({
   title: {
-    fontSize: 24,
+    fontSize: 24
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between"
   },
   left: {
-    flex: 1,
+    flex: 1
   },
   leftLinkActive: {
-    color: theme.palette.common.white,
+    color: theme.palette.common.white
   },
   right: {
     flex: 1,
-    display: 'flex',
-    justifyContent: 'flex-end',
+    display: "flex",
+    justifyContent: "flex-end"
   },
   rightLink: {
     fontSize: 16,
     color: theme.palette.common.white,
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(3)
   },
   linkSecondary: {
-    color: theme.palette.secondary.main,
-  },
+    color: theme.palette.secondary.main
+  }
 });
-
-const useStyles = makeStyles(theme => ({
-  button: {
-    margin: theme.spacing(1),
-  },
-  input: {
-    display: 'none',
-  },
-}));
 
 const AppAppBar = ({ classes, showModal }) => (
   <>
@@ -61,7 +50,7 @@ const AppAppBar = ({ classes, showModal }) => (
             smooth
             to="/#home"
           >
-            {'freya alliance'}
+            {"freya alliance"}
           </Link>
         </div>
 
@@ -99,17 +88,6 @@ const AppAppBar = ({ classes, showModal }) => (
             >
               News
             </Link>
-            <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              className={classes.rightLink}
-              component={NavLink}
-              smooth
-              to="/#reviews"
-            >
-              Reviews
-            </Link>
           </div>
           <div className="right-nav-tabs">
             <Button variant="contained" className={classes.button}>
@@ -122,7 +100,8 @@ const AppAppBar = ({ classes, showModal }) => (
                 id="navbtn"
                 smooth
                 to="#"
-              >Quiz
+              >
+                Quiz
               </Link>
             </Button>
           </div>
@@ -134,7 +113,7 @@ const AppAppBar = ({ classes, showModal }) => (
 );
 
 AppAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(AppAppBar);

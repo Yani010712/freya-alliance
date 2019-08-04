@@ -3,6 +3,7 @@ import ProductCarousel from './ProductCarousel';
 import Hero from './Hero';
 import OurMission from './OurMission';
 import Articles from './Articles';
+import News from './News';
 import PanoramicSection from './PanoramicSection';
 
 import { Container } from '@material-ui/core';
@@ -23,8 +24,9 @@ class Main extends Component {
         <Container maxWidth="lg">
 
           <Articles />
+          <News />
 
-          <h2 id="reviews">Reviews</h2>
+          {/* <h2 id="reviews">Reviews</h2> */}
         </Container>
       </>
     );
