@@ -32,13 +32,12 @@ const styles = theme => ({
 const Hero = ({ classes, showModal }) => (
     <ProductHeroLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
-      <img style={{ display: 'none' }} src={BgImage} alt="" />
+      <img id="ProductHeroLayout" style={{ display: 'none' }} src={BgImage} alt="" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
         Wondering where to begin?
       </Typography>
-      <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        We’ve compiled a list of over 34 reliable brands of menstrual cups to make your decision as simple as possible.
-        Take our Quiz to determine which ones match your body the best!
+      <Typography color="inherit" align="center" variant="h5" className={classes.h5}><b>
+        We’ve compiled a list of reliable menstrual cups <br />in hopes of making your decision as simple as possible.</b>
       </Typography>
       <Button
         color="secondary"
@@ -46,11 +45,12 @@ const Hero = ({ classes, showModal }) => (
         size="large"
         className={classes.button}
         onClick={showModal}
+        id="home-quiz-button"
       >
         Take Quiz
       </Button>
-      <Typography variant="body2" color="inherit" className={classes.more}>
-        Discover the experience
+      <Typography variant="body2" color="inherit" align="center" className={classes.more}>
+        Our Quiz will determine which ones <br />match your body the best!
       </Typography>
     </ProductHeroLayout>
 )

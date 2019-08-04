@@ -5,7 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import AppBar from '../theme/components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../theme/components/Toolbar';
-
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const styles = theme => ({
@@ -37,9 +38,18 @@ const styles = theme => ({
   },
 });
 
+const useStyles = makeStyles(theme => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+  input: {
+    display: 'none',
+  },
+}));
+
 const AppAppBar = ({ classes, showModal }) => (
   <>
-    <AppBar position="fixed">
+    <AppBar id="AppBar" position="fixed">
       <Toolbar className={classes.toolbar}>
         <div className={classes.left}>
           <Link
@@ -54,63 +64,68 @@ const AppAppBar = ({ classes, showModal }) => (
             {'freya alliance'}
           </Link>
         </div>
-        
+
         <div className={classes.right}>
-          <Link
-            color="inherit"
-            variant="h6"
-            underline="none"
-            className={classes.rightLink}
-            component={NavLink}
-            smooth
-            to="/#home"
-          >
-            Home
-          </Link>
-          <Link
-            color="inherit"
-            variant="h6"
-            underline="none"
-            className={classes.rightLink}
-            component={NavLink}
-            smooth
-            to="/#products"
-          >
-            Products
-          </Link>
-          <Link
-            color="inherit"
-            variant="h6"
-            underline="none"
-            className={classes.rightLink}
-            component={NavLink}
-            to="/news"
-          >
-            News
-          </Link>
-          <Link
-            color="inherit"
-            variant="h6"
-            underline="none"
-            className={classes.rightLink}
-            component={NavLink}
-            smooth
-            to="/#reviews"
-          >
-            Reviews
-          </Link>
-          <Link
-            color="inherit"
-            variant="h6"
-            underline="none"
-            className={classes.rightLink}
-            component={NavLink}
-            onClick={showModal}
-            smooth
-            to="#"
-          >
-            Quiz
-          </Link>
+          <div className="left-nav-tabs">
+            <Link
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              component={NavLink}
+              smooth
+              to="/#home"
+            >
+              Home
+            </Link>
+            <Link
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              component={NavLink}
+              smooth
+              to="/#products"
+            >
+              Products
+            </Link>
+            <Link
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              component={NavLink}
+              to="/news"
+            >
+              News
+            </Link>
+            <Link
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              component={NavLink}
+              smooth
+              to="/#reviews"
+            >
+              Reviews
+            </Link>
+          </div>
+          <div className="right-nav-tabs">
+            <Button variant="contained" className={classes.button}>
+              <Link
+                variant="h6"
+                underline="none"
+                className={classes.rightLink}
+                component={NavLink}
+                onClick={showModal}
+                id="navbtn"
+                smooth
+                to="#"
+              >Quiz
+              </Link>
+            </Button>
+          </div>
         </div>
       </Toolbar>
     </AppBar>
@@ -123,45 +138,3 @@ AppAppBar.propTypes = {
 };
 
 export default withStyles(styles)(AppAppBar);
-
-
-
-
-
-
-/*
-import React from "react";
-import { NavHashLink as NavLink } from "react-router-hash-link";
-import Logo from './Logo';
-
-const Navigation = ({ showModal }) => {
-  return (
-    <div>
-      <nav className="navbar-pink navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-        <Logo />
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <NavLink className="nav-item nav-link active" to="/#home">
-              Home
-            </NavLink>
-            <NavLink className="nav-item nav-link" to="/#products">
-              Products
-            </NavLink>
-            <NavLink className="nav-item nav-link" to="/news">
-              News
-            </NavLink>
-            <NavLink className="nav-item nav-link" to="/#reviews">
-              Reviews
-            </NavLink>
-            <NavLink to="#" className="nav-item nav-link" onClick={showModal}>
-              Quiz
-            </NavLink>
-          </div>
-        </div>
-      </nav>
-    </div>
-  );
-};
-
-export default Navigation;
-*/
