@@ -20,7 +20,10 @@ export default function ImgMediaCard() {
 
   return (
     <div className="grid-container" style={{ marginTop: 40, marginBottom: 80}}>
-      <h2>Articles</h2>
+     <Typography color="inherit" align="center" variant="h4" marked="center">
+       Articles 
+      </Typography>
+      
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
           <Card className={classes.card}>

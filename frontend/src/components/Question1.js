@@ -73,7 +73,7 @@ class Question1 extends Component {
     return (
       <FormControl component="form" onSubmit={this.handleSubmit}>
         <br /><br />
-        <h3>Select Your Age</h3>
+        <h3>How old are you?</h3>
         <br /><br />
         <RadioGroup
           onChange={this.handleChange}>

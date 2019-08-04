@@ -16,7 +16,7 @@ class PanoramicSection extends Component {
                 <Grid item xs={12} sm={6}>
                     <PanoramicPic/>
                 </Grid>
-                <Grid item xs={12} sm={6} style={{ backgroundColor: '#daaed1', color: '#fff' }}>
+                <Grid item xs={12} sm={6} style={{ backgroundColor: '#74665e', color: '#fff' }}>
                     <Box m={5}>
                         <BuyOneGiveOne/>
                     </Box>
