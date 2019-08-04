@@ -94,11 +94,11 @@ a:visited {
   display: none;
 }
 
-#nav.shrink {
+/* #nav.shrink {
   height: 2rem;
   transition: all ease .5s;
   background: #565f6f;
-}
+} */
 
 li {
   display: block;
@@ -154,4 +154,19 @@ margin-left: 0px;
 
 .OurMission-root-139 {
   background-color: white;
+}
+
+.terms-and-conditions {
+  font-size: 0.4rem;
+  width: 50%;
+  /* margin-left: 25%; */
+}
+.inner-modal-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#quiz-start-button {
+  width: 17rem;
 }
