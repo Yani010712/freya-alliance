@@ -88,17 +88,17 @@ const AppAppBar = ({ classes, showModal }) => (
           >
             News
           </Link>
-          <Link
+          {/* <Link
             color="inherit"
             variant="h6"
             underline="none"
             className={classes.rightLink}
             component={NavLink}
             smooth
-            to="/#reviews"
+            to="/#news"
           >
-            Reviews
-          </Link>
+            News
+          </Link> */}
           <Link
             color="inherit"
             variant="h6"
