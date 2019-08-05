@@ -130,7 +130,7 @@ class News extends Component {
 }
 
 News.defaultProps = {
-  title: 'Lastest News',
+  title: 'News',
   itemsSize: 6,
 }
 

@@ -71,7 +71,7 @@ class Question4 extends Component {
     return (
       <FormControl component="form" onSubmit={this.handleSubmit}>
         <br /><br />
-        <h3>Flow Volume</h3>
+        <h3>Do you have a light, moderate, or heavy flow?</h3>
         <br /><br />
         <RadioGroup
           onChange={this.handleChange}>

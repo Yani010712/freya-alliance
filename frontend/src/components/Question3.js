@@ -66,7 +66,7 @@ class Question3 extends Component {
     return (
       <FormControl component="form" onSubmit={this.handleSubmit}>
         <br /><br />
-        <h3>Bladder Sensitivity</h3>
+        <h3>Do you have bladder sensitivity, incontinence, or severe menstrual cramps?</h3>
         <br /><br />
         <RadioGroup
           onChange={this.handleChange}>
