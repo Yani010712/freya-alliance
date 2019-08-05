@@ -64,7 +64,7 @@ class News extends Component {
   componentDidMount = () => {
     axios
       .get (
-        `https://newsapi.org/v2/everything?q=period+menstrual&apiKey=${API_KEY}&pageSize=4
+        `https://newsapi.org/v2/everything?q=period+menstrual&apiKey=ba0b6d920524478cb594e10066cc7503&pageSize=4
              `
       )
       .then (response => {

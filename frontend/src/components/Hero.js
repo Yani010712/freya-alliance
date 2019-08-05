@@ -34,7 +34,7 @@ const Hero = ({ classes, showModal }) => (
       {/* Increase the network loading priority of the background image. */}
       <img id="ProductHeroLayout" style={{ display: 'none' }} src={BgImage} alt="" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        Wondering where to begin?
+        <b>Wondering where to begin?</b>
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}><b>
         We’ve compiled a list of reliable menstrual cups <br />in hopes of making your decision as simple as possible.</b>

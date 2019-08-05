@@ -90,7 +90,7 @@ const AppAppBar = ({ classes, showModal }) => (
             </Link>
           </div>
           <div className="right-nav-tabs">
-            <Button variant="contained" className={classes.button}>
+            <Button variant="contained" className={classes.button} id="QuizNavBtn">
               <Link
                 variant="h6"
                 underline="none"

@@ -5,6 +5,7 @@ import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from '../theme/components/Typography';
 import TextField from '../theme/components/TextField';
+import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -59,6 +60,10 @@ const LANGUAGES = [
     code: 'fr-FR',
     name: 'Français',
   },
+  {
+    code: 'es',
+    name: 'Espanol', //this needs to have a spanish n
+  },
 ];
 
 export default function Footer() {
@@ -76,27 +81,24 @@ export default function Footer() {
               className={classes.iconsWrapper}
               spacing={2}
             >
+              <Grid item>Our Story</Grid>
+              <Grid item>Get to know our team</Grid>
               <Grid item className={classes.icons}>
+                Support Us
                 <a href="https://material-ui.com/" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterFacebook.png" alt="Facebook" />
-                </a>
-                <a href="https://twitter.com/MaterialUI" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterTwitter.png" alt="Twitter" />
+                  <img src="https://img.icons8.com/nolan/64/000000/facebook-circled.png">
                 </a>
               </Grid>
-              <Grid item>© 2018 Onepirate</Grid>
+              <Grid item>Copyright© 2019 The Freya Alliance. All Rights Reserved.</Grid>
             </Grid>
           </Grid>
           <Grid item xs={6} sm={4} md={2}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Legal
-            </Typography>
             <ul className={classes.list}>
               <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/terms/">Terms</Link>
+                <Link href="">Terms</Link>
               </li>
               <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/privacy/">Privacy</Link>
+                <Link href="">Privacy</Link>
               </li>
             </ul>
           </Grid>
@@ -120,15 +122,10 @@ export default function Footer() {
           </Grid>
           <Grid item>
             <Typography variant="caption">
-              {'Icons made by '}
-              <Link href="https://www.freepik.com" rel="nofollow" title="Freepik">
-                Freepik
+              <Link href="" rel="" title="">
               </Link>
-              {' from '}
-              <Link href="https://www.flaticon.com" rel="nofollow" title="Flaticon">
-                www.flaticon.com
+              <Link href="" rel="" title="">
               </Link>
-              {' is licensed by '}
               <Link
                 href="https://creativecommons.org/licenses/by/3.0/"
                 title="Creative Commons BY 3.0"
@@ -140,6 +137,13 @@ export default function Footer() {
             </Typography>
           </Grid>
         </Grid>
+      </Container>
+      <Container className={classes.container}>
+        <Grid container spacing={5}>
+          <Grid item>
+            Contact Us
+          </Grid>
+	</Grid>
       </Container>
     </Typography>
   );

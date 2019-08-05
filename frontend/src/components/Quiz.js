@@ -11,9 +11,9 @@ class Quiz extends Component {
                 Quiz
                 </Typography>
                 <Typography color="inherit" align="center" variant="h5" marked="center">
-                Please answer each question to the best of your abilities in order to provide you with the best options.<br></br>We only recommend the highest quality FDA approved products, strictly made of medical grade silicone. You can rest assured these products are all reliable and come from humane working environments. 
+                In order to provide you with the most accurate options, <br /> please answer each question to the best of your abilities.
                 </Typography>
-                
+
                 <br /><br />
                     <Button
                         component={Link}

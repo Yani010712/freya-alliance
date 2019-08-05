@@ -6,36 +6,23 @@
   border-radius: 6px;
 }
 
-/* .navbar-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  right: 0;
-  top: 0;
-  left: 0;
-  font-size: 1rem;
-  font-family: 'Merriweather Sans', sans-serif;
-} */
-
-/* #nav {
-  height: 2rem;
-  background-color: transparent;
-  display: block;
-  position: fixed;
-  z-index: 99999;
-  transition: all ease .5s;
-} */
-
 #AppBar {
-  background-color: rgb(97, 133, 155);
+  /* background-color: rgb(97, 133, 155); */
+  background-color: #972239;
+  background-image: linear-gradient(315deg, #972239 0%, #db6885 74%);
+
   height: 3.5rem;
 }
 
 #navbtn{
   margin-left: 0;
+  font-weight: bold;
 }
 
+#QuizNavBtn {
+  border-radius: 10rem;
+  background-color: rgb(204, 197, 191);
+}
 a:link {
   color: white;
 }
@@ -78,6 +65,10 @@ a:visited {
   left:50%;
   padding: 20px;
   transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-close {
@@ -94,20 +85,9 @@ a:visited {
   display: none;
 }
 
-/* #nav.shrink {
-  height: 2rem;
-  transition: all ease .5s;
-  background: #565f6f;
-} */
-
 li {
   display: block;
 }
-
-/* .home-section{
-  padding-top: 0;
-  width: 100%;
-} */
 
 #home-container {
   width: 100px !important;
@@ -133,7 +113,9 @@ li {
   position: relative;
   top: 85vh !important;
 }
-
+.ProductHeroLayout-arrowDown-135 {
+  top: 86vh;
+}
 .AppAppBar-rightLink-7 {
 margin-left: 0px;
 }
@@ -147,6 +129,9 @@ margin-left: 0px;
   height: 3.5rem;
 }
 
+.AppAppBar-placeholder-72 {
+  height: 3.5rem !important;
+}
 #home-quiz-button {
   border-style: solid;
   border-radius: .3rem;
@@ -169,4 +154,34 @@ margin-left: 0px;
 }
 #quiz-start-button {
   width: 17rem;
+}
+.bogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bogo-container {
+  padding-top: 2rem;
+}
+.bogo-sub-header {
+  margin-top: 1.5rem;
+}
+.partnership-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40rem;
+  margin-top: 2rem;
+}
+#bogo-stories-button{
+  margin-top: 2rem;
+}
+.bogo-read-more-text {
+  /* margin-top: 3rem; */
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
