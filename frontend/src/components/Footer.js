@@ -84,7 +84,7 @@ export default function Footer() {
                   <img src="/static/themes/onepirate/appFooterTwitter.png" alt="Twitter" />
                 </a>
               </Grid>
-              <Grid item>© 2018 Onepirate</Grid>
+              <Grid item>© 2019 The Freya Alliance - All rights reserved</Grid>
             </Grid>
           </Grid>
           <Grid item xs={6} sm={4} md={2}>

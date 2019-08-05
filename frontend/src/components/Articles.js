@@ -22,7 +22,7 @@ export default function ImgMediaCard() {
     <div className="grid-container" style={{ marginTop: 40, marginBottom: 80}}>
      <Typography style={{ marginTop: 30, marginBottom: 80}}color="inherit" align="center" variant="h4" marked="center">
        Articles 
-       <span class="Typography-markedH4Center-96"></span>
+       <span className="Typography-markedH4Center-96"></span>
       </Typography>
       
       <Grid container spacing={3}>

@@ -53,7 +53,6 @@ const AppAppBar = ({ classes, showModal }) => (
             {"freya alliance"}
           </Link>
         </div>
-
         <div className={classes.right}>
           <div className="left-nav-tabs">
             <Link
@@ -84,7 +83,19 @@ const AppAppBar = ({ classes, showModal }) => (
               underline="none"
               className={classes.rightLink}
               component={NavLink}
-              to="/news"
+              smooth
+              to="/#articles"
+            >
+              Articles
+            </Link>
+            <Link
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              component={NavLink}
+              smooth
+              to="/#news"
             >
               News
             </Link>
