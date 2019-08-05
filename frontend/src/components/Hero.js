@@ -30,29 +30,31 @@ const styles = theme => ({
 });
 
 const Hero = ({ classes, showModal }) => (
-    <ProductHeroLayout backgroundClassName={classes.background}>
-      {/* Increase the network loading priority of the background image. */}
-      <img id="ProductHeroLayout" style={{ display: 'none' }} src={BgImage} alt="" />
-      <Typography color="inherit" align="center" variant="h2" marked="center">
-        <b>Wondering where to begin?</b>
-      </Typography>
-      <Typography color="inherit" align="center" variant="h5" className={classes.h5}><b>
-        We’ve compiled a list of reliable menstrual cups <br />in hopes of making your decision as simple as possible.</b>
-      </Typography>
-      <Button
-        color="secondary"
-        variant="contained"
-        size="large"
-        className={classes.button}
-        onClick={showModal}
-        id="home-quiz-button"
-      >
-        Take Quiz
-      </Button>
-      <Typography variant="body2" color="inherit" align="center" className={classes.more}>
-        Our Quiz will determine which ones <br />match your body the best!
-      </Typography>
-    </ProductHeroLayout>
+      <ProductHeroLayout backgroundClassName={classes.background} >
+        {/* Increase the network loading priority of the background image. */}
+        <img className="Site-header" style={{ display: 'none' }} src={BgImage} alt="" />
+        <div id="site-header-container" align="center">
+          <Typography color="inherit" align="center" variant="h2" marked="center" id="top-header">
+            <b>Wondering where to begin?</b>
+          </Typography>
+          <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
+            We’ve compiled a list of reliable menstrual cups <br />in hopes of making your decision as simple as possible.
+          </Typography>
+          <Button
+            color="secondary"
+            variant="contained"
+            size="large"
+            className={classes.button}
+            onClick={showModal}
+            id="home-quiz-button"
+          >
+            Take Quiz
+          </Button>
+          <Typography variant="body2" color="inherit" align="center" className={classes.more} id="home-scroll-text">
+            Or scroll down for more information!
+          </Typography>
+        </div>
+      </ProductHeroLayout>
 )
 
 export default withStyles(styles)(Hero);

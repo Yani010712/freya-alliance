@@ -39,9 +39,9 @@ export default function ContainedButtons() {
           <p align="center">
             For every cup you purchase through any link on our site, a cup will be donated to women and teens in developing nations.
           </p>
-          <h5><b>
-            We aim to provide One Million Cups by the year 2022!
-          </b></h5>
+          <h4 className="misison-campaign" align="center"><b>
+            We aim to provide One Million <br/>Cups by the year 2022!
+          </b></h4>
           <Button
             color="secondary"
             variant="contained"
@@ -52,8 +52,8 @@ export default function ContainedButtons() {
           >
             Stories
           </Button>
-          <div className="bogo-read-more-text">
-              Read more about issues women face <br /> around the world because of their periods.
+          <div className="bogo-read-more-text" align="center">
+              * Read more about issues women face <br /> around the world because of their periods.
           </div>
         </div>
 

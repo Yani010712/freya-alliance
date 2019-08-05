@@ -13,7 +13,16 @@
 
   height: 3.5rem;
 }
-
+/* #site-deader-container {
+  padding-top: 50rem;
+} */
+.site-header{
+  padding-top: 50rem;
+}
+#top-header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+}
 #navbtn{
   margin-left: 0;
   font-weight: bold;
@@ -45,22 +54,31 @@ a:visited {
 .navbar-cont .nav-item {
   margin-right: 3rem;
 }
-
+.yellow-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 3.5rem;
+  transform: rotate(90deg);
+}
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width:100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 10000;
 }
-
+.ProductHeroLayout-arrowDown-135 {
+  opacity: 0;
+}
 .modal-main {
   position:fixed;
   background: white;
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 70%;
   top:10%;
   left:50%;
   padding: 20px;
@@ -69,6 +87,7 @@ a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
 }
 
 .modal-close {
@@ -76,7 +95,9 @@ a:visited {
   left: -8px;
   top: -8px;
 }
-
+#home-scroll-text {
+  margin-top: 5rem;
+}
 .display-block {
   display: block;
 }
@@ -89,10 +110,19 @@ li {
   display: block;
 }
 
+#our-mission-container {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
 #home-container {
   width: 100px !important;
 }
-
+#our-mission-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .text-block {
   position: absolute;
   bottom: 50%;
@@ -135,6 +165,7 @@ margin-left: 0px;
 #home-quiz-button {
   border-style: solid;
   border-radius: .3rem;
+  margin-top: 3rem;
 }
 
 .OurMission-root-139 {
@@ -177,11 +208,30 @@ margin-left: 0px;
 }
 #bogo-stories-button{
   margin-top: 2rem;
+  background-color: #01CFFC;
+}
+.misison-campaign {
+  color: #01CFFC;
 }
 .bogo-read-more-text {
-  /* margin-top: 3rem; */
+  margin-top: 1rem;
   font-size: 0.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.Typography-markedH4Center-10 {
+  background-color: #F6D100 !important;
+}
+.lnr-earth:before {
+  color: #F6D100;
+}
+.lnr-thumbs-up:before {
+  color: #F6D100;
+}
+.lnr-clock:before{
+  color: #F6D100;
+}
+.Typography-markedH3Center-9 {
+  background-color: #01CFFC !important;
 }

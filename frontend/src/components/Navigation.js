@@ -41,17 +41,9 @@ const AppAppBar = ({ classes, showModal }) => (
     <AppBar id="AppBar" position="fixed">
       <Toolbar className={classes.toolbar}>
         <div className={classes.left}>
-          <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            className={classes.title}
-            component={NavLink}
-            smooth
-            to="/#home"
-          >
-            {"freya alliance"}
-          </Link>
+          <a href="#home">
+            <img src="freya_logo.png" height="65px"></img>
+          </a>
         </div>
 
         <div className={classes.right}>
