@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import ProductCarousel from './ProductCarousel';
 import Hero from './Hero';
@@ -23,10 +24,15 @@ class Main extends Component {
 
         <Container maxWidth="lg">
 
+        <div id="articles">
           <Articles />
-          <News />
+        </div>
+        <div id="news">
+         <News />
+        </div>
 
-          {/* <h2 id="reviews">Reviews</h2> */}
+
+
         </Container>
       </>
     );

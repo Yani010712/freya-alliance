@@ -1,7 +1,8 @@
-.footer-freya{
-    background : #fbedef;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.fotter-div-1 {
+  display: flex;
+  justify-content: space-around;
+}
 
-
+.fotter-div {
+  display: block;
 }
