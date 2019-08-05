@@ -95,7 +95,7 @@ class News extends Component {
     const { title, itemsSize, classes } = this.props;
 
     return (
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" id="news">
         <Typography
           variant="h4"
           marked="center"

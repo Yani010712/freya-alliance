@@ -48,7 +48,7 @@ const styles = theme => ({
 });
 
 const OurMission = ({classes}) => (
-  <section className={classes.root}>
+  <section className={classes.root} id="ourmission">
     <Container className={classes.container}>
       <Typography
         variant="h4"

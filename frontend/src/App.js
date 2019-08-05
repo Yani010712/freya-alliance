@@ -23,6 +23,7 @@ import News from "./components/News";
 import Results from "./components/Results";
 import Modal from "./components/Modal";
 import Articles from "./components/Articles";
+import OurMission from "./components/OurMission";
 
 
 class App extends Component {
@@ -73,8 +74,7 @@ class App extends Component {
               <Route path="/quiz/question6" render={props => this.modalQuestion(<Question6 />)} />
               <Route path="/quiz/question7" render={props => this.modalQuestion(<Question7 />)} />
               <Route path="/quiz/results" render={props => this.modalQuestion(<Results />)} />
-              <Route path="/news" component={News} />
-              <Route path="/articles" component={Articles} />
+             
             </Switch>
             <Footer />
             {redirect}
