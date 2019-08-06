@@ -16,8 +16,6 @@ import Question6 from "./components/Question6";
 import Question7 from "./components/Question7";
 import Results from "./components/Results";
 import Modal from "./components/Modal";
-import Footer from './components/Footer';
-import { ThemeProvider } from '@material-ui/styles';
 
 
 class App extends Component {

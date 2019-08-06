@@ -112,7 +112,7 @@ class ProductCarousel extends React.Component {
     return (
       <section className={classes.root} id="products">
         <div className="purple-arrow">
-          <img src="purple-arrow.png" height="65px"></img>
+          <img src="purple-arrow.png" height="65px" alt="recommended" />
         </div>
           <Container className={classes.container}>
             <div className="purple-border">

@@ -21,7 +21,7 @@ export default function ImgMediaCard() {
   return (
     <div className="grid-container" id="articles" style={{ marginTop: 40, marginBottom: 80}}>
       <div className="orange-arrow">
-        <img src="orange-arrow.png" height="65px"></img>
+        <img src="orange-arrow.png" height="65px" alt="tips" />
       </div>
      <Typography style={{ marginTop: 30, marginBottom: 20}}color="inherit" align="center" variant="h4" marked="center">
        Tips

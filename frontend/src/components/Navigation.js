@@ -1,3 +1,4 @@
+
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
@@ -42,7 +43,7 @@ const AppAppBar = ({ classes, showModal }) => (
       <Toolbar className={classes.toolbar}>
         <div className={classes.left}>
           <a href="#home">
-            <img src="freya_logo.png" height="65px"></img>
+            <img src="freya_logo.png" height="65px" alt="Freya Alliance" />
           </a>
         </div>
         <div className={classes.right}>
