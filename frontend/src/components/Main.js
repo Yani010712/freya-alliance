@@ -5,7 +5,8 @@ import OurMission from './OurMission';
 import Articles from './Articles';
 import News from './News';
 import PanoramicSection from './PanoramicSection';
-
+import PeriodCalculator from './PeriodCalculator';
+import Footer from './Footer';
 import { Container } from '@material-ui/core';
 
 
@@ -13,13 +14,17 @@ class Main extends Component {
   render() {
     return (
       <>
-        <Hero showModal={this.props.showModal} />
+        <div id="home">
+          <Hero showModal={this.props.showModal} />
+        </div>
 
         <OurMission />
 
         <PanoramicSection />
 
         <ProductCarousel />
+
+        <PeriodCalculator />
 
         <Container maxWidth="lg">
 
@@ -28,6 +33,7 @@ class Main extends Component {
 
           {/* <h2 id="reviews">Reviews</h2> */}
         </Container>
+        <Footer />
       </>
     );
   }

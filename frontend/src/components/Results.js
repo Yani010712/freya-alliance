@@ -56,8 +56,8 @@ class Results extends Component {
         }));
 
         return (
-            <div className={classes.root}>
-                <h2>Your Cups</h2><br />
+            <div className={classes.root} id="quiz-results" justify="center">
+                <h2>These are the best cups for you!</h2><br />
                 <Grid container spacing={2}>
                     {this.state.list.map((product, index) => (
                         <Grid key={index} item xs={6} sm={3}>

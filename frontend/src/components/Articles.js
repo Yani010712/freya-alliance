@@ -19,12 +19,14 @@ export default function ImgMediaCard() {
   const classes = useStyles();
 
   return (
-    <div className="grid-container" style={{ marginTop: 40, marginBottom: 80}}>
-     <Typography style={{ marginTop: 30, marginBottom: 80}}color="inherit" align="center" variant="h4" marked="center">
-       Articles 
-       <span class="Typography-markedH4Center-96"></span>
+    <div className="grid-container" id="articles" style={{ marginTop: 40, marginBottom: 80}}>
+     <Typography style={{ marginTop: 30, marginBottom: 20}}color="inherit" align="center" variant="h4" marked="center">
+       Tips
+       <span className="Typography-markedH4Center-10" id="article-underline"></span>
       </Typography>
-      
+      <h5 id="article-header" align="center" >
+      These links contain more details on all things Cup Related!
+    </h5>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
           <Card className={classes.card}>

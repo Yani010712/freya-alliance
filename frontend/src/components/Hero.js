@@ -32,13 +32,14 @@ const styles = theme => ({
 const Hero = ({ classes, showModal }) => (
       <ProductHeroLayout backgroundClassName={classes.background} >
         {/* Increase the network loading priority of the background image. */}
-        <img className="Site-header" style={{ display: 'none' }} src={BgImage} alt="" />
+        <img className="Site-header" style={{ display: 'none' }} src={BgImage} alt="" id="home-jumbotron" id="home" />
         <div id="site-header-container" align="center">
+          <h4 className="home-top-text">Welcome to the World of</h4>
           <Typography color="inherit" align="center" variant="h2" marked="center" id="top-header">
-            <b>Wondering where to begin?</b>
+            <b>Menstrual Cup Awareness!</b>
           </Typography>
           <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-            We’ve compiled a list of reliable menstrual cups <br />in hopes of making your decision as simple as possible.
+            We’ve compiled a list of reliable products <br />in hopes of making your transition as simple as possible.
           </Typography>
           <Button
             color="secondary"

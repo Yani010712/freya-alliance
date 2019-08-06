@@ -48,7 +48,7 @@ const styles = theme => ({
 });
 
 const OurMission = ({classes}) => (
-  <div>
+  <div id="ourmission">
     <div className="yellow-arrow">
       <img src="yellow-arrow.png" height="65px"></img>
     </div>

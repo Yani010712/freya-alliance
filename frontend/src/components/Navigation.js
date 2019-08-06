@@ -66,9 +66,31 @@ const AppAppBar = ({ classes, showModal }) => (
               className={classes.rightLink}
               component={NavLink}
               smooth
+              to="/#ourmission"
+            >
+              Our Mission
+            </Link>
+            <Link
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              component={NavLink}
+              smooth
               to="/#products"
             >
               Products
+            </Link>
+            <Link
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              component={NavLink}
+              smooth
+              to="/#articles"
+            >
+              Tips
             </Link>
             <Link
               color="inherit"

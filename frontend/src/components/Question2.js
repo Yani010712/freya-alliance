@@ -70,7 +70,7 @@ class Question2 extends Component {
       return <Redirect to="/quiz/question3" push={true} />;
     }
     return (
-      <FormControl component="form" onSubmit={this.handleSubmit}>
+      <FormControl component="form" onSubmit={this.handleSubmit} id="question2" align="center">
         <br /><br />
         <h3>How physically active are you? </h3>
         <br /><br />

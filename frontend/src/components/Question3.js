@@ -64,7 +64,7 @@ class Question3 extends Component {
       return <Redirect to="/quiz/question4" push={true} />;
     }
     return (
-      <FormControl component="form" onSubmit={this.handleSubmit}>
+      <FormControl component="form" onSubmit={this.handleSubmit} id="question3" align="center">
         <br /><br />
         <h3>Do you have bladder sensitivity, urinary incontinence, or severe menstrual cramps?</h3>
         <br /><br />
