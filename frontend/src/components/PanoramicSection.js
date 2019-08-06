@@ -12,13 +12,13 @@ class PanoramicSection extends Component {
   render() {
     return (
       <Grid container>
-        <Grid item xs={12} m={6}>
+        <Grid item xs={12} sm={6}>
           <PanoramicPic />
         </Grid>
         <Grid
           item
           xs={12}
-          m={6}
+          sm={6}
           style={{ backgroundColor: "#74665e", color: "#fff" }}
         >
           <Box m={5}>

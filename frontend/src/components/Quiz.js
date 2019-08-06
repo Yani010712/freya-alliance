@@ -7,7 +7,7 @@ class Quiz extends Component {
     render() {
         return (
             <div className="inner-modal-content">
-                <Typography color="inherit" align="center" variant="h3" marked="center">
+                <Typography color="inherit" align="center" variant="h3" marked="center" id="quiz-header">
                 Quiz
                 </Typography>
                 <Typography color="inherit" align="center" variant="h5" marked="center">

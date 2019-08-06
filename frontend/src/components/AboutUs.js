@@ -43,7 +43,7 @@ export default function ImgMediaCard() {
               <CardContent className={classes.content}>
                 <Typography variant="subtitle1">Annette Aristide</Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                I’m an Engineer and Designer who enjoys exploring Archaeological Sites, studying Astronomy, learning new languages, and drinking tea. I aim to bring together all of my skills to bring forth economic, health, structural, and social change.
+                I’m an Engineer and Designer who enjoys exploring archaeological sites, studying astronomy, learning new languages, and drinking tea. I aim to rally all of my skills to bring forth economic, health, structural, and social change.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -62,7 +62,7 @@ export default function ImgMediaCard() {
               <CardContent className={classes.content}>
                 <Typography variant="subtitle1">Yani Rodriguez</Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                I’m a Web Developer very interested in using innovative technology to solve educational, social, and environmental problems. I love coffee, building origami art, and playingSudoku.
+                I’m a Software Engineer, who’s very interested in using innovative technology to solve educational, social, and environmental problems. I love coffee, building origami art, and playing Sudoku.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -81,7 +81,7 @@ export default function ImgMediaCard() {
               <CardContent className={classes.content}>
                 <Typography variant="subtitle1">Milen</Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                I’m a Front-End Developer. In my spare time, I enjoy drawing, hand drumming, and meditating.
+                I’m a Front End Developer who aims to embellish websites. Outside of coding, I enjoy drawing, hand drumming, and meditating. I'm also eager about travel, different cultures, and sweets.
                 </Typography>
               </CardContent>
             </CardActionArea>

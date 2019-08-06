@@ -36,7 +36,7 @@ const Hero = ({ classes, showModal }) => (
         <div id="site-header-container" align="center">
           <h4 className="home-top-text">Welcome to the World of</h4>
           <Typography color="inherit" align="center" variant="h2" marked="center" id="top-header">
-            <b>Menstrual Cup Awareness!</b>
+            <b>Menstrual Cup Awareness</b>
           </Typography>
           <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
             We’ve compiled a list of reliable products <br />in hopes of making your transition as simple as possible.

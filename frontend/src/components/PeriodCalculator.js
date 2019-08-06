@@ -79,14 +79,17 @@ class PeriodCalculator extends Component {
     render() {
 
         return (
-            <div >
+            <div id="calc-section">
+              <div className="green-arrow">
+                <img src="green-arrow.png" height="65px"></img>
+              </div>
               <Typography style={{ marginTop: 10, marginBottom: 25}}color="inherit" align="center" variant="h4" marked="center" id="calculator-top">
               Period Calculator
               <span className="Typography-markedH4Center-10" id="calc-underline"></span>
               </Typography>
               <h5 id="calculator-header" align="center" >
               Use our calculator to discover how <br /> much you spend on menstrual care products per year!
-            </h5>
+              </h5>
 
               <GridContainer container spacing={0} className="calculator-right">
                   <Grid item xs={6}>

@@ -92,6 +92,9 @@ class News extends Component {
 
     return (
       <Container maxWidth="lg" id="news">
+        <div className="yellow-arrow-news">
+          <img src="yellow-arrow.png" height="65px" alt="Our Mission"/>
+        </div>
         <Typography
           variant="h4"
           marked="center"

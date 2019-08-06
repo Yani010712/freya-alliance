@@ -20,12 +20,15 @@ export default function ImgMediaCard() {
 
   return (
     <div className="grid-container" id="articles" style={{ marginTop: 40, marginBottom: 80}}>
+      <div className="orange-arrow">
+        <img src="orange-arrow.png" height="65px"></img>
+      </div>
      <Typography style={{ marginTop: 30, marginBottom: 20}}color="inherit" align="center" variant="h4" marked="center">
        Tips
        <span className="Typography-markedH4Center-10" id="article-underline"></span>
       </Typography>
       <h5 id="article-header" align="center" >
-      These links contain more details on all things Cup Related!
+      Want to know how to use and care for these products?
     </h5>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
@@ -38,7 +41,7 @@ export default function ImgMediaCard() {
                   height="200"
                   image="./folding.png"
                   title="How to use & fold" />
-              
+
               <CardContent>
                 <Typography gutterBottom subtitle2="h5" component="h5">
                   How to use & fold
@@ -59,7 +62,7 @@ export default function ImgMediaCard() {
                   image="./how_to_remove.png"
                   title="How to remove"
                 />
-              
+
               <CardContent>
                 <Typography gutterBottom subtitle2="h5" component="h5">
                  How to remove
@@ -80,7 +83,7 @@ export default function ImgMediaCard() {
                   image="how_to_clean.png"
                   title="How to wash"
                 />
-              
+
               <CardContent>
                 <Typography gutterBottom subtitle2="h5" component="h5">
                  How to wash
@@ -101,7 +104,7 @@ export default function ImgMediaCard() {
                   image="environmental.png"
                   title="Environmental damage"
                 />
-              
+
               <CardContent>
                 <Typography gutterBottom subtitle2="h5" component="h5">
                 Environmental damage

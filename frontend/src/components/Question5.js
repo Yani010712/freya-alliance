@@ -66,7 +66,7 @@ class Question5 extends Component {
     return (
       <FormControl component="form" onSubmit={this.handleSubmit} id="question5" align="center">
         <br /><br />
-        <h3>Have you ever given birth? <br / >(C-sections count too!)</h3>
+        <h3>Have you ever given birth? <br / >(C-Sections count too!)</h3>
         <br /><br />
         <RadioGroup
           onChange={this.handleChange}>

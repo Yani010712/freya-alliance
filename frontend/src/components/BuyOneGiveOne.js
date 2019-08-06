@@ -21,8 +21,9 @@ export default function ContainedButtons() {
 
   return (
     <div className ="bogo">
-      <Typography color="inherit" align="center" variant="h4" marked="center" className="bogo-container">
+      <Typography color="inherit" align="center" variant="h4"  className="bogo-container">
           Buy One Give One
+          <span className="Typography-markedH4Center-10" id="bogo-underline"></span>
         </Typography>
         <div className="bogo-sub-header">
           <Typography color="inherit" align="center" variant="h6" marked="center" >

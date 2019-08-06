@@ -118,7 +118,7 @@ class ProductCarousel extends React.Component {
             <div className="purple-border">
               <Typography
                 variant="h4"
-            
+
                 className={classes.title}
                 component="h2"
                 id="Typography-markedH4Center-rec"
@@ -126,6 +126,9 @@ class ProductCarousel extends React.Component {
                 Recommended Products
                 <span className="Typography-markedH4Center-10" id="prod-underline"></span>
               </Typography>
+              <h5 id="product-header" align="center" >
+              Drag the carousel to explore some of our favorite products
+              </h5>
               <Slider {...settings}>
                 {this.state.list.map((product, index) => (
                   <Box key={index} className={classes.box}>

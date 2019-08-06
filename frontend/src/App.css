@@ -187,6 +187,7 @@ margin-left: 0px;
 .terms-and-conditions {
   font-size: 0.4rem;
   width: 50%;
+  padding-top: 2rem;
   /* margin-left: 25%; */
 }
 .inner-modal-content {
@@ -255,6 +256,33 @@ margin-left: 0px;
   padding-left: 8rem;
   transform: rotate(90deg);
 }
+.green-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 8rem;
+  transform: rotate(90deg);
+  padding-right: 14rem;
+}
+.orange-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 8rem;
+  transform: rotate(90deg);
+  padding-right: 10rem;
+}
+.yellow-arrow-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 8rem;
+  transform: rotate(90deg);
+  padding-right: 7rem;
+}
 .slick-arrow {
   color: red;
 }
@@ -306,10 +334,10 @@ margin-left: 0px;
   justify-content: center;
   align-items: center;
 }
-#quiz-results {
+/* #quiz-results {
   display: flex;
   align-items: center;
-}
+} */
 .calculator-right {
   display: flex;
   justify-content: center;
@@ -318,7 +346,10 @@ margin-left: 0px;
 #calculator-header{
   font-size: 1.5rem;
   margin-bottom: 1.8rem;
-
+}
+#product-header{
+  font-size: 1.55rem;
+  margin-bottom: 1.8rem;
 }
 #calculator-top {
   margin-top: 1rem;
@@ -337,6 +368,9 @@ margin-left: 0px;
 #prod-underline {
   background-color: #AE00FF !important;
 }
+#bogo-underline {
+  background-color: #03CFFC !important;
+}
 #article-underline {
   background-color: #FF9E00 !important;
 }
@@ -345,7 +379,9 @@ margin-left: 0px;
   margin-bottom: 1.8rem;
 }
 
-
+#quiz-header {
+  padding-bottom: 2rem;
+}
 
 #email-form {
   padding-top: 0.2rem;
@@ -464,4 +500,8 @@ textarea {
 }
 footer {
   background-color: rgb(168, 154, 156) !important;
+}
+
+#calc-section {
+  margin-bottom: 6rem;
 }
