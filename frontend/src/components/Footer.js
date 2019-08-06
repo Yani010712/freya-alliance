@@ -5,143 +5,102 @@ import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from '../theme/components/Typography';
 import TextField from '../theme/components/TextField';
-
+import ContactUs from './ContactUs';
+import AboutUs from './AboutUs';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    backgroundColor: theme.palette.secondary.light,
-    marginTop: theme.spacing(8)
-  },
-  container: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(8),
-    display: 'flex',
-  },
-  iconsWrapper: {
-    height: 120,
-  },
-  icons: {
-    display: 'flex',
-  },
-  icon: {
-    width: 48,
-    height: 48,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: theme.palette.warning.main,
-    marginRight: theme.spacing(1),
-    '&:hover': {
-      backgroundColor: theme.palette.warning.dark,
-    },
-  },
-  list: {
-    margin: 0,
-    listStyle: 'none',
-    paddingLeft: 0,
-  },
-  listItem: {
-    paddingTop: theme.spacing(0.5),
-    paddingBottom: theme.spacing(0.5),
-  },
-  language: {
-    marginTop: theme.spacing(1),
-    width: 150,
-  },
+ root: {
+   display: 'flex',
+   backgroundColor: theme.palette.secondary.light,
+   marginTop: theme.spacing(4)
+ },
+ container: {
+   marginTop: theme.spacing(4),
+   marginBottom: theme.spacing(4),
+   display: 'flex',
+ },
+ iconsWrapper: {
+   height: 120,
+ },
+ icons: {
+   display: 'flex',
+ },
+ icon: {
+   width: 48,
+   height: 48,
+   display: 'flex',
+   justifyContent: 'center',
+   alignItems: 'center',
+   marginRight: theme.spacing(1),
+ },
+ list: {
+   margin: 0,
+   listStyle: 'none',
+   paddingLeft: 0,
+ },
+ listItem: {
+   paddingTop: theme.spacing(0.5),
+   paddingBottom: theme.spacing(0.5),
+ },
+ language: {
+   marginTop: theme.spacing(1),
+   width: 150,
+ },
 }));
 
-const LANGUAGES = [
-  {
-    code: 'en-US',
-    name: 'English',
-  },
-  {
-    code: 'fr-FR',
-    name: 'Français',
-  },
-];
-
 export default function Footer() {
-  const classes = useStyles();
+ const classes = useStyles();
 
-  return (
-    <Typography component="footer" className={classes.root}>
-      <Container className={classes.container}>
-        <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
-            <Grid
-              container
-              direction="column"
-              justify="flex-end"
-              className={classes.iconsWrapper}
-              spacing={2}
-            >
-              <Grid item className={classes.icons}>
-                <a href="https://material-ui.com/" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterFacebook.png" alt="Facebook" />
-                </a>
-                <a href="https://twitter.com/MaterialUI" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterTwitter.png" alt="Twitter" />
-                </a>
-              </Grid>
-              <Grid item>© 2019 The Freya Alliance - All rights reserved</Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Legal
-            </Typography>
-            <ul className={classes.list}>
-              <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/terms/">Terms</Link>
-              </li>
-              <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/privacy/">Privacy</Link>
-              </li>
-            </ul>
-          </Grid>
-          <Grid item xs={6} sm={8} md={4}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Language
-            </Typography>
-            <TextField
-              select
-              SelectProps={{
-                native: true,
-              }}
-              className={classes.language}
-            >
-              {LANGUAGES.map(language => (
-                <option value={language.code} key={language.code}>
-                  {language.name}
-                </option>
-              ))}
-            </TextField>
-          </Grid>
-          <Grid item>
-            <Typography variant="caption">
-              {'Icons made by '}
-              <Link href="https://www.freepik.com" rel="nofollow" title="Freepik">
-                Freepik
-              </Link>
-              {' from '}
-              <Link href="https://www.flaticon.com" rel="nofollow" title="Flaticon">
-                www.flaticon.com
-              </Link>
-              {' is licensed by '}
-              <Link
-                href="https://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CC 3.0 BY
-              </Link>
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
-    </Typography>
-  );
+ return (
+   <div>
+
+     <footer align="center" className="footer-container-1">
+       <Typography component="footer" className={classes.root}>
+         <Container className={classes.container} className="footer-body" >
+           <div className="about-us-container">
+             <p>Get to Know Our Team</p>
+             <span className="Typography-markedH4Center-10" id="get-to-know-us-underline"></span>
+           </div>
+           <AboutUs />
+         </Container>
+       </Typography>
+     </footer>
+     <footer align="center" className="footer-container-2">
+       <Typography component="footer" className={classes.root}>
+         <Container className={classes.container} className="footer-body" >
+            <div id="email-form" align="center">
+              <div>
+                <h4 id="contact-header">Contact Us</h4>
+                <span className="Typography-markedH4Center-10" id="contact-us-underline"></span>
+              </div>
+              <div>
+                <form method="POST" action="https://formspree.io/aiaother@gmail.com">
+                  <div align="center">
+                    <div className="input-fields">
+                    <label for="formName" id="footer-text"></label><br/>
+                      <input type="text" className="frm-control frm-control-sm" placeholder="Name*" />
+                    </div>
+                    <div>
+                    <label for="formEmail" id="footer-text"></label> <br/>
+                      <input type="email" className="frm-control frm-control-sm" placeholder="Email Address*" />
+                    </div>
+                    <div>
+                    <label for="formMessage" id="footer-text"></label><br/>
+                      <textarea className="frm-control frm-control-sm" rows="2" placeholder="Message*"></textarea>
+                    </div>
+                  </div>
+                  <div align="center">
+                    <button type="submit" className="btn1 btn1-outline-light btn-sm">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div>
+              <p id="footer-text-end">© 2019 The Freya Alliance</p>
+            </div>
+         </Container>
+       </Typography>
+     </footer>
+    </div>
+ );
 }

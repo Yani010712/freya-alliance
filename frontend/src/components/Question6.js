@@ -68,9 +68,9 @@ class Question6 extends Component {
       return <Redirect to="/quiz/question7" push={true} />;
     }
     return (
-      <FormControl component="form" onSubmit={this.handleSubmit}>
+      <FormControl component="form" onSubmit={this.handleSubmit} id="question6" align="center">
         <br /><br />
-        <h3>Cervical Height</h3>
+        <h3>What's your cervical height? <br /> Please select "Regular" if you're unsure.</h3>
         <br /><br />
         <RadioGroup
           onChange={this.handleChange}>

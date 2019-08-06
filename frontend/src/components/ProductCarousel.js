@@ -111,23 +111,31 @@ class ProductCarousel extends React.Component {
 
     return (
       <section className={classes.root} id="products">
-        <Container className={classes.container}>
-          <Typography
-            variant="h4"
-            marked="center"
-            className={classes.title}
-            component="h2"
-          >
-            Recommended Products
-          </Typography>
-          <Slider {...settings}>
-            {this.state.list.map((product, index) => (
-              <Box key={index} className={classes.box}>
-                <Product product={product} />
-              </Box>
-            ))}
-          </Slider>
-        </Container>
+        <div className="purple-arrow">
+          <img src="purple-arrow.png" height="65px"></img>
+        </div>
+          <Container className={classes.container}>
+            <div className="purple-border">
+              <Typography
+                variant="h4"
+            
+                className={classes.title}
+                component="h2"
+                id="Typography-markedH4Center-rec"
+              >
+                Recommended Products
+                <span className="Typography-markedH4Center-10" id="prod-underline"></span>
+              </Typography>
+              <Slider {...settings}>
+                {this.state.list.map((product, index) => (
+                  <Box key={index} className={classes.box}>
+                    <Product product={product} />
+                  </Box>
+                ))}
+              </Slider>
+            </div>
+          </Container>
+
       </section>
     );
   }

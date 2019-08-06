@@ -6,7 +6,7 @@ import Articles from './Articles';
 import News from './News';
 import PanoramicSection from './PanoramicSection';
 import PeriodCalculator from './PeriodCalculator';
-
+import Footer from './Footer';
 import { Container } from '@material-ui/core';
 
 
@@ -14,7 +14,9 @@ class Main extends Component {
   render() {
     return (
       <>
-        <Hero showModal={this.props.showModal} />
+        <div id="home">
+          <Hero showModal={this.props.showModal} />
+        </div>
 
         
         <OurMission />
@@ -30,6 +32,7 @@ class Main extends Component {
           <Articles />
           <News />
         </Container>
+        <Footer />
       </>
     );
   }

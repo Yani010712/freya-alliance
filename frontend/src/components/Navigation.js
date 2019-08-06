@@ -41,17 +41,9 @@ const AppAppBar = ({ classes, showModal }) => (
     <AppBar id="AppBar" position="fixed">
       <Toolbar className={classes.toolbar}>
         <div className={classes.left}>
-          <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            className={classes.title}
-            component={NavLink}
-            smooth
-            to="/#home"
-          >
-            {"freya alliance"}
-          </Link>
+          <a href="#home">
+            <img src="freya_logo.png" height="65px"></img>
+          </a>
         </div>
         <div className={classes.right}>
           <div className="left-nav-tabs">
@@ -78,7 +70,6 @@ const AppAppBar = ({ classes, showModal }) => (
             >
               Our Mission
             </Link>
-
             <Link
               color="inherit"
               variant="h6"
@@ -99,7 +90,7 @@ const AppAppBar = ({ classes, showModal }) => (
               smooth
               to="/#articles"
             >
-              Articles
+              Tips
             </Link>
             <Link
               color="inherit"
@@ -114,7 +105,7 @@ const AppAppBar = ({ classes, showModal }) => (
             </Link>
           </div>
           <div className="right-nav-tabs">
-            <Button variant="contained" className={classes.button}>
+            <Button variant="contained" className={classes.button} id="QuizNavBtn">
               <Link
                 variant="h6"
                 underline="none"
