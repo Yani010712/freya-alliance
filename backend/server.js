@@ -2,18 +2,27 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const CupsData = require('./data/cup.model');
+const path = require('path');
 
 
 const { ProductsList } = require('./data');
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 app.use(bodyParser.json());
+
+if(process.env.NODE.ENV === 'production'){
+  app.use(express.static('frontend/build'));
+
+  app.get('*', (req,res)=> {
+    res.sendFile(path.join(_dirname, 'frontend', 'build', 'index.html'));
+  });
+}
 
 app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT);
 
-  mongoose.connect('mongodb+srv://freya:freya@cluster0-tdbvc.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://freya:freya@cluster0-tdbvc.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
   const connection = mongoose.connection;
 
   connection.once('open', function () {
