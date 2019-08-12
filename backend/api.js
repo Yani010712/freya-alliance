@@ -2,19 +2,21 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const CupsData = require('./data/cup.model');
-
-
 const { ProductsList } = require('./data');
+
 require("dotenv").config();
-const PORT = 4000;
-const app = express();
-app.use(bodyParser.json());
 
-app.listen(PORT, function () {
-  console.log("Server is running on Port: " + PORT);
+const PORT = process.env.PORT || 4000;
 
-  const CON_STR = process.env.MONGO_DB_CON_STR;
-  mongoose.connect(CON_STR,'mongodb+srv://freya:freya@cluster0-tdbvc.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
+module.exports = function (app) {
+
+  app.use(bodyParser.json());
+
+  app.listen(PORT, function () {
+    console.log("Server is running on Port: " + PORT);
+  });
+
+  mongoose.connect('mongodb+srv://freya:freya@cluster0-tdbvc.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
   const connection = mongoose.connection;
 
   connection.once('open', function () {
@@ -109,4 +111,4 @@ app.listen(PORT, function () {
     });
   });
 
-});
+};
