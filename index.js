@@ -5,4 +5,5 @@ const app = express();
 
 app.use(express.static('./frontend/build'));
 
+// init app
 api(app);
