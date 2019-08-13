@@ -401,6 +401,9 @@ margin-left: 0px;
   display: flex;
   align-items: center;
 } */
+.jss72 {
+    height: 0px;
+}
 .calculator-left {
   display: flex;
   justify-content: center;
