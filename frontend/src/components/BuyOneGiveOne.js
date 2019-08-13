@@ -31,12 +31,12 @@ export default function ContainedButtons() {
           </Typography>
         </div >
         <div className="partnership-description">
-          <p align="center">
+          <Typography  align="center" variant="subtitle2"  >
             The Freya Alliance aims to help all women have regular access to menstrual hygiene products especially in areas where these products are either too expensive, or unavailable. We believe reusable menstrual cups are the solution to empowering women, enabling them to contribute towards our global development.
-          </p>
-          <p align="center">
+          </Typography>
+          <Typography  align="center" variant="subtitle2"  >
             For every cup you purchase through any link on our site, a cup will be donated to women and teens in developing nations.
-          </p>
+          </Typography>
         </div>
         <div align="center">
           <h5 className="misison-campaign" align="center"><b>
@@ -52,9 +52,9 @@ export default function ContainedButtons() {
           >
             Stories
           </Button>
-          <div className="bogo-read-more-text" align="center">
+          <Typography className="bogo-read-more-text" align="center">
               * Read more about issues women face <br /> around the world because of their periods.
-          </div>
+          </Typography>
         </div>
     </div>
   );
