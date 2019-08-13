@@ -1,3 +1,7 @@
+body {
+  padding-right: -1rem;
+}
+
 .wrapper {
   z-index: 3;
   position: relative;
@@ -6,22 +10,12 @@
   border-radius: 6px;
 }
 
-#home-jumbotron {
-  opacity: 0.8;
+.MuiAppBar-colorPrimary {
+  background-color: transparent !important;
 }
 
 #AppBar {
-  /* background-color: rgb(97, 133, 155); */
-  background-color: #972239;
-  background-image: linear-gradient(315deg, #972239 0%, #db6885 74%);
-
-  height: 3.5rem;
-}
-/* #site-deader-container {
-  padding-top: 50rem;
-} */
-.site-header{
-  padding-top: 50rem;
+  height: 3.3rem;
 }
 
 .home-top-text {
@@ -34,14 +28,44 @@
   /* margin-top: 7rem; */
 }
 
+.nav-color {
+    background-color: #637081;
+    background-image: linear-gradient(316deg, rgba(99, 112, 140, 0.9) 0%, rgba(131, 172, 212, 0.9) 71%);
+}
+
+.nav-transparent {
+  background-color: transparent;
+  background-image: transparent;
+}
+
 #navbtn{
   margin-left: 0;
   font-weight: bold;
 }
 
 #QuizNavBtn {
-  border-radius: 10rem;
-  background-color: rgb(204, 197, 191);
+    border-radius: 10rem;
+    background-color: transparent;
+    border-width: 0.095rem;
+    border-style: solid;
+    border-color: white;
+    width: 7rem;
+    margin-bottom: 0.7rem;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.MuiButton-contained {
+    box-shadow: none !important;
+}
+.modal-close {
+    position: fixed !important;
+    left: 5px !important;
+    top: 5px !important;
+}
+
+#QuizNavBtn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  text-decoration-color: white;
 }
 a:link {
   color: white;
@@ -51,15 +75,22 @@ a:visited {
   color: white;
 }
 
+a:hover {
+  text-decoration: none;
+  text-shadow: 1.5px 1.5px 4px #424242;
+}
+
 .left-nav-tabs {
   display: flex;
   align-items: center;
   margin-right: 2rem;
+  margin-bottom: 0.7rem;
 }
 
 .right-nav-tabs button {
   margin-right: 1rem;
-  width: 6rem;
+  width: 7rem;
+  margin-bottom: 0.7rem;
 }
 
 .navbar-cont .nav-item {
@@ -82,14 +113,16 @@ a:visited {
   background: rgba(0, 0, 0, 0.9);
   z-index: 10000;
 }
-.ProductHeroLayout-arrowDown-135 {
+#jumbotron-image {
+  position: relative;
+  margin-top: 0;
   opacity: 0;
 }
 .modal-main {
   position:fixed;
   background: white;
   width: 60%;
-  height: 70%;
+  height: 80%;
   top:10%;
   left:50%;
   padding: 20px;
@@ -100,7 +133,6 @@ a:visited {
   align-items: center;
   border-radius: 1rem;
 }
-
 .modal-close {
   position: fixed;
   left: -8px;
@@ -162,9 +194,12 @@ li {
 margin-left: 0px;
 }
 
-.ProductHeroLayout-backdrop-129 {
-  opacity: 0 !important;
+/* .ProductHeroLayout-backdrop-129 {
   background-color: none !important;
+} */
+.ProductHeroLayout-root-131 {
+  height: 100vh !important;
+
 }
 
 .AppAppBar-placeholder-2 {
@@ -172,12 +207,13 @@ margin-left: 0px;
 }
 
 .AppAppBar-placeholder-72 {
-  height: 3.5rem !important;
+  height: 0rem !important;
 }
 #home-quiz-button {
   border-style: solid;
-  border-radius: .3rem;
+  border-radius: 5rem;
   margin-top: 3rem;
+  font-size: 1.1rem;
 }
 
 .OurMission-root-139 {
@@ -218,10 +254,18 @@ margin-left: 0px;
   flex-direction: column;
   width: 40rem;
   margin-top: 2rem;
+  font-size: 1.15rem;
 }
 #bogo-stories-button{
   margin-top: 2rem;
+  border-radius: 20rem;
   background-color: #01CFFC;
+  height: 3.4rem;
+  font-size: 1.1rem;
+}
+#bogo-stories-button:hover {
+  background-color: #0a99db;
+  text-decoration-color: white;
 }
 .misison-campaign {
   color: #01CFFC;
@@ -338,6 +382,11 @@ margin-left: 0px;
   display: flex;
   align-items: center;
 } */
+.calculator-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .calculator-right {
   display: flex;
   justify-content: center;
@@ -358,7 +407,14 @@ margin-left: 0px;
 #calculator-text{
   color: #125003;
 }
-
+#calculator-text-left-header {
+  margin-bottom: 2rem;
+  color: #125003;
+}
+#calculator-text-header{
+  color: #125003;
+  font-size: 1.5rem;
+}
 #calc-underline {
   background-color: #357728 !important;
 }
@@ -466,6 +522,7 @@ textarea {
   outline: none;
 }
 
+
 .footer-body {
   display: flex;
   flex-direction: column;
@@ -499,9 +556,25 @@ textarea {
   margin-top: 64px;
 }
 footer {
-  background-color: rgb(168, 154, 156) !important;
+  background-color: #A59592 !important;
 }
 
+#article-cards:hover{
+  transform: scale(1.08);
+  z-index: 9;
+}
+#article-cards{
+  transition: all 0.2s;
+  box-shadow: 0.625rem 0.625rem 1.2rem lightgrey;
+}
 #calc-section {
   margin-bottom: 6rem;
+}
+.MuiGrid-spacing-xs-2 {
+    width: 100% !important;
+    margin: -16px !important;
+}
+.MuiGrid-container {
+    display: flex;
+    justify-content: center;
 }

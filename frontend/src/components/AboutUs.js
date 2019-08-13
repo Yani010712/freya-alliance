@@ -33,18 +33,22 @@ export default function ImgMediaCard() {
         <Grid item xs={6} sm={3}>
           <Card className={classes.card}>
             <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Annette"
-                height="300"
-                image="./AristideAnnette.jpg"
-                title="Annette"
-              />
+              <a href="https://annetteia.herokuapp.com/">
+                <CardMedia
+                  component="img"
+                  alt="Annette"
+                  height="300"
+                  image="./AristideAnnette.jpg"
+                  title="Annette"
+                />
+            </a>
               <CardContent className={classes.content}>
-                <Typography variant="subtitle1">Annette Aristide</Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                I’m an Engineer and Designer who enjoys exploring archaeological sites, studying astronomy, learning new languages, and drinking tea. I aim to rally all of my skills to bring forth economic, health, structural, and social change.
-                </Typography>
+                  <Typography variant="subtitle1">Annette Aristide</Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                  I’m an Engineer and Designer who enjoys exploring archaeological sites, studying astronomy, learning new languages, and drinking tea. I aim to rally all of my skills to bring forth economic, health, structural, and social change.
+                  </Typography>
+
+
               </CardContent>
             </CardActionArea>
           </Card>
@@ -52,13 +56,15 @@ export default function ImgMediaCard() {
         <Grid item xs={6} sm={3}>
           <Card className={classes.card}>
             <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="yani"
-                height="300"
-                image="./RodriguezYani.jpg"
-                title="Yani"
-              />
+              <a href="">
+                <CardMedia
+                  component="img"
+                  alt="yani"
+                  height="300"
+                  image="./RodriguezYani.jpg"
+                  title="Yani"
+                />
+              </a>
               <CardContent className={classes.content}>
                 <Typography variant="subtitle1">Yani Rodriguez</Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
@@ -71,13 +77,15 @@ export default function ImgMediaCard() {
         <Grid item xs={6} sm={3}>
           <Card className={classes.card}>
             <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Milen"
-                height="300"
-                image="Buchillon-TriffMilen.jpg"
-                title="Milen"
-              />
+              <a href="">
+                <CardMedia
+                  component="img"
+                  alt="Milen"
+                  height="300"
+                  image="Buchillon-TriffMilen.jpg"
+                  title="Milen"
+                />
+              </a>
               <CardContent className={classes.content}>
                 <Typography variant="subtitle1">Milen</Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
