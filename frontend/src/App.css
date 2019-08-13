@@ -186,10 +186,12 @@ li {
   position: relative;
   top: 85vh !important;
 }
+
 .ProductHeroLayout-arrowDown-135 {
   top: 90vh;
   opacity: 0;
 }
+
 .AppAppBar-rightLink-7 {
 margin-left: 0px;
 }
@@ -199,8 +201,11 @@ margin-left: 0px;
 } */
 .ProductHeroLayout-root-131 {
   height: 100vh !important;
-
 }
+
+/* .ProductHeroLayout-root-373 {
+    height: 100vh !important;
+} */
 
 .AppAppBar-placeholder-2 {
   height: 3.5rem;
