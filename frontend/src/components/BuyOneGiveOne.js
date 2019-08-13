@@ -26,20 +26,20 @@ export default function ContainedButtons() {
           <span className="Typography-markedH4Center-10" id="bogo-underline"></span>
         </Typography>
         <div className="bogo-sub-header">
-          <Typography color="inherit" align="center" variant="h6" marked="center" >
+          <Typography color="inherit" align="center" variant="h5" marked="center" >
             Learn More About Our Campaign
           </Typography>
         </div >
         <div className="partnership-description">
-          <Typography  align="center" variant="subtitle2"  >
-            The Freya Alliance aims to help all women have regular access to menstrual hygiene products especially in areas where these products are either too expensive, or unavailable. We believe reusable menstrual cups are the solution to empowering women, enabling them to contribute towards our global development.
+          <Typography  align="center" variant="subtitle3"  >
+            The Freya Project aims to help all women have regular access to menstrual hygiene products, especially in areas where these products are either too expensive, or unavailable. We believe reusable menstrual cups are the solution to empowering women, enabling them to contribute towards our global development.
           </Typography>
-          <Typography  align="center" variant="subtitle2"  >
+          <Typography  align="center" variant="subtitle3" className="partnership-p2" >
             For every cup you purchase through any link on our site, a cup will be donated to women and teens in developing nations.
           </Typography>
         </div>
-        <div align="center">
-          <h5 className="misison-campaign" align="center"><b>
+        <div align="center" className="mission-p3">
+          <h5 className="mission-campaign" align="center"><b>
             We aim to provide <u>One Million Cups</u> by the year 2022!
           </b></h5>
           <Button

@@ -15,29 +15,35 @@ body {
 }
 
 #AppBar {
-  height: 3.3rem;
+  height: 3rem;
 }
 
 .home-top-text {
   margin-top: 10rem;
+  font-weight: bold;
 }
 
 #top-header {
   font-family: 'Roboto', sans-serif;
-  font-size: 4rem;
+  font-size: 4.5rem;
   /* margin-top: 7rem; */
 }
 
 .nav-color {
-    background-color: #637081;
-    background-image: linear-gradient(316deg, rgba(99, 112, 140, 0.9) 0%, rgba(131, 172, 212, 0.9) 71%);
+  background-color: #f1f2f6;
+  background-image: linear-gradient(315deg, rgba(143, 159, 183, 0.6) 0%, rgba(143, 159, 183, 0.6) 74%);
+  /* transition: ease-in;
+  transition-duration: 2s; */
 }
-
+#calc-section {
+    margin-bottom: 6rem;
+    background-color: rgb(242, 255, 239);
+}
 .nav-transparent {
   background-color: transparent;
   background-image: transparent;
+  /* transition-duration: 2s; */
 }
-
 #navbtn{
   margin-left: 0;
   font-weight: bold;
@@ -50,7 +56,7 @@ body {
     border-style: solid;
     border-color: white;
     width: 7rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 1rem;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
@@ -64,7 +70,7 @@ body {
 }
 
 #QuizNavBtn:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   text-decoration-color: white;
 }
 a:link {
@@ -77,7 +83,10 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  text-shadow: 1.5px 1.5px 4px #424242;
+  text-shadow: 1.5px 1.5px 5px #6F6F6F;
+}
+button:focus {
+  outline:0;
 }
 
 .left-nav-tabs {
@@ -148,11 +157,18 @@ a:hover {
 .display-none {
   display: none;
 }
-
+#misison-details{
+  font-size: 1.2rem;
+}
 li {
   display: block;
 }
-
+.mission-p3{
+  padding-top: 2rem;
+}
+.mission-campaign {
+  color: #01CFFC;
+}
 #our-mission-container {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -172,7 +188,9 @@ li {
   opacity: 1;
   color: white;
 }
-
+.MuiBox-root-251 {
+    margin: 20px !important;
+}
 .container {
   padding: 0;
 }
@@ -182,26 +200,21 @@ li {
   justify-content: flex-end;
 }
 
-.ProductHeroLayout-arrowDown-131 {
-  position: relative;
-  top: 85vh !important;
-}
-
-.ProductHeroLayout-arrowDown-135 {
-  top: 90vh;
-  opacity: 0;
-}
 
 .AppAppBar-rightLink-7 {
 margin-left: 0px;
 }
-
+.AppAppBar-rightLink-77 {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 30px;
+}
 /* .ProductHeroLayout-backdrop-129 {
   background-color: none !important;
 } */
-.ProductHeroLayout-root-131 {
+/* .ProductHeroLayout-root-131 {
   height: 100vh !important;
-}
+} */
 
 /* .ProductHeroLayout-root-373 {
     height: 100vh !important;
@@ -259,10 +272,14 @@ margin-left: 0px;
   flex-direction: column;
   width: 40rem;
   margin-top: 2rem;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+}
+.partnership-p2{
+  padding-top: 1.5rem;
 }
 #bogo-stories-button{
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   border-radius: 20rem;
   background-color: #01CFFC;
   height: 3.4rem;
@@ -271,9 +288,6 @@ margin-left: 0px;
 #bogo-stories-button:hover {
   background-color: #0a99db;
   text-decoration-color: white;
-}
-.misison-campaign {
-  color: #01CFFC;
 }
 .bogo-read-more-text {
   margin-top: 1rem;
@@ -310,9 +324,9 @@ margin-left: 0px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-left: 8rem;
+  padding-left: 9rem;
   transform: rotate(90deg);
-  padding-right: 14rem;
+  padding-right: 13rem;
 }
 .orange-arrow {
   display: flex;
@@ -398,16 +412,16 @@ margin-left: 0px;
   align-items: center;
 }
 #calculator-header{
-  font-size: 1.5rem;
-  margin-bottom: 1.8rem;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
 }
 #product-header{
-  font-size: 1.55rem;
+  font-size: 1.4rem;
   margin-bottom: 1.8rem;
 }
 #calculator-top {
-  margin-top: 1rem;
-  margin-bottom: 0.6rem;
+  margin-top: .1rem;
+  margin-bottom: 1rem;
 }
 #calculator-text{
   color: #125003;
@@ -436,7 +450,7 @@ margin-left: 0px;
   background-color: #FF9E00 !important;
 }
 #article-header{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 1.8rem;
 }
 

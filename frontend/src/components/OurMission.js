@@ -74,7 +74,7 @@ const OurMission = ({classes}) => (
               <Typography variant="h5" className={classes.title}>
                   Sustainable
               </Typography>
-              <Typography variant="h6"  align="center">
+              <Typography variant="subtitle3" id="misison-details" align="center">
               On average, individuals use approximately 11,000 pads and tampons. That’s 250 to 300 pounds of plastic waste per person!
               </Typography>
             </div>
@@ -85,7 +85,7 @@ const OurMission = ({classes}) => (
               <Typography variant="h5" className={classes.title}>
                 Affordable
               </Typography>
-              <Typography variant="h6"  align="center">
+              <Typography variant="subtitle3" id="misison-details"  align="center">
               By adopting the use of a menstrual cup, individuals save an average of $7,800 in their lifetimes!
               </Typography>
             </div>
@@ -96,7 +96,7 @@ const OurMission = ({classes}) => (
               <Typography variant="h5" className={classes.title}>
                 Convenient
               </Typography>
-              <Typography variant="h6"  align="center">
+              <Typography variant="subtitle3" id="misison-details" align="center">
               Menstrual cups can last up to 12 hours before needing to be emptied, depending on your flow.
               </Typography>
             </div>

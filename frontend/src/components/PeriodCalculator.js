@@ -83,9 +83,9 @@ class PeriodCalculator extends Component {
                     Period Calculator
               <span className="Typography-markedH4Center-10" id="calc-underline"></span>
                 </Typography>
-                <h5 id="calculator-header" align="center" >
+                <p id="calculator-header" align="center" >
                     Use our calculator to discover how <br /> much you spend on menstrual care products per year!
-              </h5>
+              </p>
 
                 <GridContainer container spacing={0} >
                     <Grid className="calculator-left" item lg={6} sm={12}>

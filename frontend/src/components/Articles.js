@@ -27,9 +27,9 @@ export default function ImgMediaCard() {
        Tips
        <span className="Typography-markedH4Center-10" id="article-underline"></span>
       </Typography>
-      <h5 id="article-header" align="center" >
+      <p id="article-header" align="center" >
       Want to know how to use and care for these products?
-    </h5>
+    </p>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
           <Card id="article-cards" className={classes.card}>

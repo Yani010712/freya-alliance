@@ -11,7 +11,7 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
-      height: '80vh',
+      height: '100vh',
       minHeight: 500,
       maxHeight: 1300,
     },
@@ -29,8 +29,8 @@ const styles = theme => ({
     right: 0,
     top: 0,
     bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.5,
+    backgroundColor: theme.palette.common,
+    opacity: 0,
     zIndex: -1,
   },
   background: {
@@ -60,10 +60,7 @@ function ProductHeroLayout(props) {
         <div className={clsx(classes.background, backgroundClassName)} />
         <img
           className={classes.arrowDown}
-          src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAh0lEQVR4AWLABv4fLPwAwtjkaKdhVANQkpWQBiCfBcYIAtA9BxgAAlEQQG17kESdqFsFBUFQtwpQYu8Q8Jth4vssHpo/IwsntLUBb+qM/NjB4IYuDpjBpc7BILvRA4MG1CszdfL/ywSbDgVeKcx0a+LDE6xgnrLku3E0u/JSLYfhBN86sckBAK4Z2n3Yn7jWAAAAAElFTkSuQmCC"
-          height="16"
-          width="12"
-          alt="arrow down"
+          src=""
         />
       </Container>
     </section>

@@ -52,13 +52,13 @@ const styles = theme => ({
     },
     {
       breakpoint: 600,
-    
+
     },
     {
       breakpoint: 480,
-      
+
     }
-    
+
   ]
 });
 
@@ -68,7 +68,7 @@ const AppAppBar = ({ classes, showModal }) => (
       <Toolbar className={classes.toolbar}>
         <div className={classes.left}>
           <a href="#home">
-            <img src={"freya_logo.png"} height={"65px"} alt="Freya Alliance" />
+            <img src={"freya_logo.png"} height={"55px"} alt="Freya Alliance" />
           </a>
         </div>
         <div className={classes.right}>
@@ -153,7 +153,7 @@ const AppAppBar = ({ classes, showModal }) => (
 
 AppAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
-  
+
 };
 
 export default withStyles(styles)(AppAppBar);
