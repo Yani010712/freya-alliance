@@ -59,7 +59,6 @@ class PeriodCalculator extends Component {
         this.state = {
             tampons: 10,
             pads: 10,
-            // result: this.calculate(this.state.tampons,this.state.pads),
         }
 
     }
@@ -67,13 +66,10 @@ class PeriodCalculator extends Component {
         return tampons * 0.50 + pads * 0.60;
     }
     handlePadsChange = (event, value) => {
-        // console.log(value);
         this.setState({ pads: value });
-        // this.setState({result: this.calculate(this.state.tampons,this.state.pads)})
     }
     handleTamponsChange = (event, value) => {
         this.setState({ tampons: value });
-        // this.setState({result: this.calculate(this.state.tampons,this.state.pads)})
     }
 
     render() {
@@ -91,10 +87,10 @@ class PeriodCalculator extends Component {
                     Use our calculator to discover how <br /> much you spend on menstrual care products per year!
               </h5>
 
-                <GridContainer container spacing={0} className="calculator-right">
-                    <Grid item lg={6} sm={12}>
+                <GridContainer container spacing={0} >
+                    <Grid className="calculator-left" item lg={6} sm={12}>
                         <GridFormContainer container>
-                            <h4 id="calculator-text">Select the amount of Tampons and/or Pads you use per month.</h4>
+                            <h4 id="calculator-text-left-header">Select the amount of Tampons and/or Pads you use per month.</h4>
                             <Grid item xs={12}>
 
                                 <Typography variant={"h6"} align={"left"} id="calculator-text">Tampons</Typography>
@@ -106,19 +102,19 @@ class PeriodCalculator extends Component {
                             </Grid>
                         </GridFormContainer>
                     </Grid>
-                    <Grid item lg={6} sm={12}>
+                    <Grid className="calculator-right" item lg={6} sm={12}>
                         <GridResultContainer container spacing={2} >
                             <h4 id="calculator-text">Be amazed at the amount of money you cound be saving!</h4>
                             <Grid item sm={6} xs={12} align="center">
-                                <Typography id="calculator-text">Your annual expenses:</Typography>
+                                <Typography id="calculator-text-header">Your annual expenses:</Typography>
                                 <Typography variant={"h3"} align={"center"} id="calculator-text">${((this.state.pads * 0.60 + this.state.tampons * 0.50) * 12).toFixed(2)}</Typography>
                             </Grid>
                             <Grid item sm={6} xs={12}>
-                                <Typography align="center" id="calculator-text">Your lifetime expenses:</Typography>
+                                <Typography align="center" id="calculator-text-header">Your lifetime expenses:</Typography>
                                 <Typography variant={"h3"} align={"center"} id="calculator-text">${((this.state.pads * 0.60 + this.state.tampons * 0.50) * 12 * 40).toFixed(2)}</Typography>
                             </Grid>
                             <Grid container >
-                                <Typography xs={12} variant="overline" id="calculator-text"> <b>* Average costs in the United States are are quantified in US Dollars</b></Typography>
+                                <Typography xs={12} variant="overline" id="calculator-text"> <b>* Averages are based off of US Costs and quantified in US Dollars</b></Typography>
                             </Grid>
                         </GridResultContainer>
                     </Grid>

@@ -1,18 +1,18 @@
 import React from 'react';
-
 import { withStyles } from '@material-ui/core/styles';
-
 import ProductHeroLayout from '../theme/components/ProductHeroLayout';
 import Typography from '../theme/components/Typography';
 import Button from '../theme/components/Button';
-
 import BgImage from '../assets/hero-background.jpg';
+
+
 
 const styles = theme => ({
   background: {
     backgroundImage: `url(${BgImage})`,
-    backgroundColor: '#7fc7d9', // Average color of the background image.
+    backgroundColor: 'none', // Average color of the background image.
     backgroundPosition: 'center',
+
   },
   button: {
     minWidth: 200,
@@ -30,9 +30,10 @@ const styles = theme => ({
 });
 
 const Hero = ({ classes, showModal }) => (
-      <ProductHeroLayout backgroundClassName={classes.background} >
+
+      <ProductHeroLayout id="jumbotron-image" backgroundClassName={classes.background}>
         {/* Increase the network loading priority of the background image. */}
-        <img className="Site-header" style={{ display: 'none' }} src={BgImage} alt="" id="home-jumbotron" />
+        <img style={{ display: 'none' }} src={BgImage} alt=""/>
         <div id="site-header-container" align="center">
           <h4 className="home-top-text">Welcome to the World of</h4>
           <Typography color="inherit" align="center" variant="h2" marked="center" id="top-header">
@@ -52,7 +53,7 @@ const Hero = ({ classes, showModal }) => (
             Take Quiz
           </Button>
           <Typography variant="body2" color="inherit" align="center" className={classes.more} id="home-scroll-text">
-            Or scroll down for more information!
+            Scroll down for more information!
           </Typography>
         </div>
       </ProductHeroLayout>

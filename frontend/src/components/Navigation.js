@@ -8,6 +8,17 @@ import Toolbar, { styles as toolbarStyles } from "../theme/components/Toolbar";
 import Button from "@material-ui/core/Button";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
+window.addEventListener('scroll', function() {
+ let nav = document.getElementById("AppBar")
+ if (window.scrollY >= 50) {
+   nav.classList.add("nav-color")
+   nav.classList.remove("nav-transparent")
+ } else if (window.scrollY <= 50) {
+   nav.classList.add("nav-transparent")
+   nav.classList.remove("nav-color")
+ }
+})
+
 const styles = theme => ({
   title: {
     fontSize: 24
@@ -120,13 +131,11 @@ const AppAppBar = ({ classes, showModal }) => (
             </Link>
           </div>
           <div className="right-nav-tabs">
-            <Button variant="contained" className={classes.button} id="QuizNavBtn">
+            <Button variant="contained" component={NavLink} onClick={showModal} className={classes.button} id="QuizNavBtn">
               <Link
                 variant="h6"
                 underline="none"
                 className={classes.rightLink}
-                component={NavLink}
-                onClick={showModal}
                 id="navbtn"
                 smooth
                 to="#"

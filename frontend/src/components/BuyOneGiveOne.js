@@ -39,9 +39,9 @@ export default function ContainedButtons() {
           </Typography>
         </div>
         <div align="center">
-          <Typography className="misison-campaign" variant="h6" align="center"><b>
+          <h5 className="misison-campaign" align="center"><b>
             We aim to provide <u>One Million Cups</u> by the year 2022!
-          </b></Typography>
+          </b></h5>
           <Button
             color="secondary"
             variant="contained"

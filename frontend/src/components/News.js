@@ -23,7 +23,7 @@ const styles = theme => ({
     position: "relative",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
   },
   p: {
     fontSize: 24,

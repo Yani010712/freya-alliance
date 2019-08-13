@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 345,
+    maxWidth: 300,
   },
 });
 
@@ -32,7 +32,7 @@ export default function ImgMediaCard() {
     </h5>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
-          <Card className={classes.card}>
+          <Card id="article-cards" className={classes.card}>
             <CardActionArea>
               <a href={'https://lenacup.com/pages/folds'}>
                 <CardMedia
@@ -43,8 +43,8 @@ export default function ImgMediaCard() {
                   title="How to use & fold" />
 
               <CardContent>
-                <Typography gutterBottom subtitle2="h5" component="h5">
-                  How to use & fold
+                <Typography gutterBottom subtitle2="h5" component="h5" align="center">
+                  How to Fold & Use Your Menstrual Cup
                 </Typography>
               </CardContent>
               </a>
@@ -52,7 +52,7 @@ export default function ImgMediaCard() {
           </Card>
         </Grid>
         <Grid item xs={6} sm={3}>
-          <Card className={classes.card}>
+          <Card id="article-cards" className={classes.card}>
             <CardActionArea>
               <a href={'https://menstrualcupaholic.com/how-to-remove-a-menstrual-cup/'}>
                 <CardMedia
@@ -64,8 +64,8 @@ export default function ImgMediaCard() {
                 />
 
               <CardContent>
-                <Typography gutterBottom subtitle2="h5" component="h5">
-                 How to remove
+                <Typography gutterBottom subtitle2="h5" component="h5" align="center">
+                 How to Remove Your Menstrual Cup
                 </Typography>
               </CardContent>
               </a>
@@ -73,7 +73,7 @@ export default function ImgMediaCard() {
           </Card>
         </Grid>
         <Grid item xs={6} sm={3}>
-          <Card className={classes.card}>
+          <Card id="article-cards" className={classes.card}>
             <CardActionArea>
               <a href={'https://www.reusablenation.com/zero-waste-living/how-to-clean-and-store-your-menstrual-cup-correctly'}>
                 <CardMedia
@@ -85,8 +85,8 @@ export default function ImgMediaCard() {
                 />
 
               <CardContent>
-                <Typography gutterBottom subtitle2="h5" component="h5">
-                 How to wash
+                <Typography gutterBottom subtitle2="h5" component="h5" align="center">
+                 How to Care for Your Menstrual Cup
                 </Typography>
               </CardContent>
               </a>
@@ -94,27 +94,29 @@ export default function ImgMediaCard() {
           </Card>
         </Grid>
         <Grid item xs={6} sm={3}>
-          <Card className={classes.card}>
+          <Card id="article-cards" className={classes.card}>
             <CardActionArea>
-              <a href={'https://www.theguardian.com/sustainable-business/2015/apr/27/disposable-tampons-arent-sustainable-but-do-women-want-to-talk-about-it'}>
+              <a href={'https://www.menstrualcupsaustraliaonline.com.au/how-long-can-i-wear-a-menstrual-cup/'}>
                 <CardMedia
                   component="img"
-                  alt="Environmental damage"
+                  alt="wear duration"
                   height="200"
-                  image="environmental.png"
-                  title="Environmental damage"
+                  image="time.png"
+                  title="How Long Can I Wear a Menstrual Cup?"
                 />
 
               <CardContent>
-                <Typography gutterBottom subtitle2="h5" component="h5">
-                Environmental damage
+                <Typography gutterBottom subtitle2="h5" component="h5" align="center">
+                How Long Can I Wear a Menstrual Cup
                 </Typography>
               </CardContent>
               </a>
             </CardActionArea>
           </Card>
         </Grid>
+
       </Grid>
+
     </div>
   );
 }

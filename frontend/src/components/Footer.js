@@ -95,7 +95,7 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <p id="footer-text-end">© 2019 The Freya Alliance</p>
+              <p id="footer-text-end">© 2019 The Freya Project</p>
             </div>
          </Container>
        </Typography>
