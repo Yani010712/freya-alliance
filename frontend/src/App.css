@@ -404,6 +404,10 @@ margin-left: 0px;
 .jss72 {
     height: 0px !important;
 }
+@media (min-width: 600px)
+.jss72 {
+    height: 0px !important;
+}
 .calculator-left {
   display: flex;
   justify-content: center;

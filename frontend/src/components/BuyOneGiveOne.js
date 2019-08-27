@@ -52,7 +52,7 @@ export default function ContainedButtons() {
           >
             Stories
           </Button>
-          <Typography className="bogo-read-more-text" align="center">
+          <Typography className="bogo-read-more-text" align="center" variant"">
               * Read more about issues women face <br /> around the world because of their periods.
           </Typography>
         </div>
