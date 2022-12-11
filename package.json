@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/Yani010712/freya-alliance#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
